@@ -1,0 +1,8 @@
+{
+  "comparisons": 180,
+  "identifiers": 84,
+  "median_absolute_difference_percent": 1.5333119184301311,
+  "p90_absolute_difference_percent": 5.586759990173494,
+  "not_an_independence_test": true,
+  "no_observations_excluded_by_this_diagnostic": true
+}

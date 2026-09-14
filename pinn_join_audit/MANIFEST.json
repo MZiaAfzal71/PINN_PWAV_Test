@@ -1,0 +1,135 @@
+{
+  "audit_date": "2026-09-14",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 14712,
+      "sha256": "b65cad928d18283ffd49daa1fcea34ade078a54744454d3d79283289c54267a3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1902,
+      "sha256": "d6db8b5bae1fabbda7896ea6aa9d172a90a08aa7a3b3bcdbbeb4e822150fdfb9"
+    },
+    {
+      "path": "audit_thermoml.py",
+      "bytes": 16514,
+      "sha256": "e6fbf3e72cf23f2d507de3484dd661cc693924a11795410703c593cf457e9148"
+    },
+    {
+      "path": "build_audit_report.py",
+      "bytes": 18525,
+      "sha256": "2df16bc411cce45d3abd0eaa7a2f0dfdf5b7b3ef24e4182a191020045e7d06da"
+    },
+    {
+      "path": "inputs/ChickosAcreeCompendiumVaporization.csv",
+      "bytes": 3590331,
+      "sha256": "bf3d928535baa662849d0ced75acda117134c1cdc421facad2bd0f11b30a99ff"
+    },
+    {
+      "path": "inputs/nist_metadata.json",
+      "bytes": 14393,
+      "sha256": "400a40833aba7d8de219ca18df1d522458125d6bf15479514603fffe5b778ecf"
+    },
+    {
+      "path": "inputs/original_RDR_README.md",
+      "bytes": 2204,
+      "sha256": "dfae09723c12e727371801a0a8f8d4760970add39ae5478b1b91f44627c417bc"
+    },
+    {
+      "path": "inputs/rdr_metadata.json",
+      "bytes": 10399,
+      "sha256": "2b38a194f72e80f7d90d0643ef299070a99f19dd19d5a1b3ffba5420e9de3b20"
+    },
+    {
+      "path": "local_clapeyron_diagnostic.png",
+      "bytes": 63589,
+      "sha256": "437971fbcc34c3c61b1bfa7a22f50654b651a7cc19611604105d37988a9039c2"
+    },
+    {
+      "path": "results/boiling_records_supplement.csv",
+      "bytes": 945351,
+      "sha256": "e832c2164ce4a66fe7080c9e33b01d3fdb21cadf2a37b7ced2f461a3f19608c2"
+    },
+    {
+      "path": "results/citations.json",
+      "bytes": 2878869,
+      "sha256": "624d9220ac5e36cef0cb22baaa80e964706e833103211bdc0cc64ddb7af385f7"
+    },
+    {
+      "path": "results/diagnostic_summary.json",
+      "bytes": 252,
+      "sha256": "881c709b141c61cf7a26b8e518bcea878f242ccefc48777abe1875a368359760"
+    },
+    {
+      "path": "results/enthalpy_records.csv",
+      "bytes": 12740422,
+      "sha256": "bf9ea6cf43c6ff0228f3f1d3982eef8a479206690fcb6223a89827a2b98f5a36"
+    },
+    {
+      "path": "results/enthalpy_source_audit.csv",
+      "bytes": 35911,
+      "sha256": "51de89202e01b08b71ffe6759708ad289ece523df13dd9ac3cbe067b5833a4db"
+    },
+    {
+      "path": "results/extraction_errors.csv",
+      "bytes": 1177,
+      "sha256": "b216ff78647e48e272fe5dbc0cd7aefc7403c9001786fca8070b356559f12354"
+    },
+    {
+      "path": "results/local_clapeyron_diagnostics.csv",
+      "bytes": 61692,
+      "sha256": "a96cbeae3e0cacfe66c9426e23ef7f10f28addb41d577ec0b4e201fc9acf3b03"
+    },
+    {
+      "path": "results/molecule_audit.csv",
+      "bytes": 226031,
+      "sha256": "2320c500847657d2e6215b1021376b7c56bda1753ec7f6066382d5b03342f08a"
+    },
+    {
+      "path": "results/pressure_ceiling_sensitivity.json",
+      "bytes": 584,
+      "sha256": "d54faafa25a7b5c61345299590f9010a382d19340cf9042c2493e1186d4e096a"
+    },
+    {
+      "path": "results/pressure_records.csv",
+      "bytes": 40239957,
+      "sha256": "1e17837296e137b8baee7662e1f886aabdff2e533d988ca3163eca8475d23c38"
+    },
+    {
+      "path": "results/series_audit.csv",
+      "bytes": 312485,
+      "sha256": "62b488d9b3e4c223975509080daf765dadb613ea31d1eccc372ba8d083f4fef1"
+    },
+    {
+      "path": "results/statistics.json",
+      "bytes": 1793,
+      "sha256": "3a325b8b702fe4c180b9e94318970f28225c54609c7f0876a135d9312337a972"
+    },
+    {
+      "path": "results/thermoml_enthalpy_records.csv",
+      "bytes": 628025,
+      "sha256": "d1b534a8c7c859b5324ab36b3d11c7b1fb47f96a0ba3d30aafe872f4793be4fa"
+    },
+    {
+      "path": "results/thermoml_provenance.jsonl",
+      "bytes": 18544805,
+      "sha256": "439cf9077b3bc97c81f34ced5fa9f5a114d1ed327a20c7373984ff3c06bb3461"
+    },
+    {
+      "path": "results/xml_verification.json",
+      "bytes": 242,
+      "sha256": "dc1d45c4009c3f1a24adafe498bd2361a23b4b8b9f4a0737169c2888c067b51b"
+    },
+    {
+      "path": "source_review_examples.json",
+      "bytes": 3012,
+      "sha256": "97f0a30098a6e32f31f5422cda0945ffd2b4249286200f31d860d74b7e716bb3"
+    },
+    {
+      "path": "verify_and_diagnose.py",
+      "bytes": 8185,
+      "sha256": "f39365ac30387cbba79deb14e1070a2aa7098ac4aa1411d520be092b1f99bc41"
+    }
+  ]
+}

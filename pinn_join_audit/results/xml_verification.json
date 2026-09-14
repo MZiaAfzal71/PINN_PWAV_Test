@@ -1,0 +1,6 @@
+{
+  "xml_studies": 5,
+  "xml_records_compared": 300,
+  "mismatches": [],
+  "coverage": "vapor pressure, temperature as variable and constraint, boiling at specified pressure, liquid/crystal phases, calorimetric enthalpy; 5 selected studies"
+}

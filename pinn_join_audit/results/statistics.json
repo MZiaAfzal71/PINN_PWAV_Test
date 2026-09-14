@@ -1,0 +1,47 @@
+{
+  "archive_bytes": 189433115,
+  "archive_sha256": "231161b5e443dc1ae0e5da8429d86a88474cb722016e5b790817bb31c58d7ec2",
+  "enthalpy_sha256": "bf3d928535baa662849d0ced75acda117134c1cdc421facad2bd0f11b30a99ff",
+  "counts": {
+    "json_studies": 11923,
+    "Vapor or sublimation pressure, kPa_blocks": 4869,
+    "Boiling temperature at pressure P, K_blocks": 370,
+    "Molar enthalpy of vaporization or sublimation, kJ/mol_blocks": 903
+  },
+  "extraction_errors": 19,
+  "temperature_level_grouping_K": 0.1,
+  "all_pure_pressure_properties": {
+    "records": 66226,
+    "molecular_identifiers": 1943
+  },
+  "stable_liquid_gas_pressure": {
+    "records": 44515,
+    "molecular_identifiers": 1455
+  },
+  "numeric_domain_pressure": {
+    "records": 20145,
+    "molecular_identifiers": 1111
+  },
+  "primary_method_and_chemistry_screen": {
+    "records": 16214,
+    "molecular_identifiers": 860
+  },
+  "primary_distinct_doi_identity_T_p_tuples": 15953,
+  "primary_molecules_with_any_enthalpy": 742,
+  "primary_molecules_with_C_candidate": 214,
+  "primary_C_candidate_records": 793,
+  "primary_molecules_with_C_inside_pressure_envelope": 121,
+  "long_curve_molecules": 584,
+  "three_anchor_curve_molecules": 535,
+  "three_anchor_curve_molecules_with_C": 116,
+  "single_series_three_anchor_molecules": 518,
+  "single_series_three_anchor_molecules_with_C": 102,
+  "non_acid_name_primary_molecules": 824,
+  "non_acid_name_C_molecules": 209,
+  "non_acid_name_three_anchor_C_molecules": 115,
+  "nist_liquid_calorimetry_label_matched_molecules": 15,
+  "C_source_reference_groups": 190,
+  "enthalpy_raw_records": 16727,
+  "enthalpy_raw_identifiers": 7459,
+  "review_status": "Feasibility candidates only. No molecular identifier or C label is certified as a fully validated independent training observation."
+}

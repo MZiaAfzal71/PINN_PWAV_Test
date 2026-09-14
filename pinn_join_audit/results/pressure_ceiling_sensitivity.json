@@ -1,0 +1,26 @@
+[
+  {
+    "p_ceiling_Pa": 5000,
+    "pressure_rows": 13016,
+    "identifiers": 741,
+    "C_match_identifiers": 158,
+    "three_anchor_identifiers": 436,
+    "three_anchor_C_identifiers": 78
+  },
+  {
+    "p_ceiling_Pa": 10000,
+    "pressure_rows": 14348,
+    "identifiers": 798,
+    "C_match_identifiers": 188,
+    "three_anchor_identifiers": 479,
+    "three_anchor_C_identifiers": 95
+  },
+  {
+    "p_ceiling_Pa": 20000,
+    "pressure_rows": 16214,
+    "identifiers": 860,
+    "C_match_identifiers": 214,
+    "three_anchor_identifiers": 535,
+    "three_anchor_C_identifiers": 116
+  }
+]
