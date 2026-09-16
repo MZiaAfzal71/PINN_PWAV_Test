@@ -1,0 +1,32 @@
+[
+  {
+    "episode_counts": {
+      "test": 78,
+      "train": 292,
+      "validation": 66
+    },
+    "pressure_ceiling_Pa": 20000,
+    "source_series_selection": "same_preselected_series_as_20kPa",
+    "split_assignments": "unchanged"
+  },
+  {
+    "episode_counts": {
+      "test": 74,
+      "train": 259,
+      "validation": 61
+    },
+    "pressure_ceiling_Pa": 10000,
+    "source_series_selection": "same_preselected_series_as_20kPa",
+    "split_assignments": "unchanged"
+  },
+  {
+    "episode_counts": {
+      "test": 70,
+      "train": 234,
+      "validation": 57
+    },
+    "pressure_ceiling_Pa": 5000,
+    "source_series_selection": "same_preselected_series_as_20kPa",
+    "split_assignments": "unchanged"
+  }
+]
