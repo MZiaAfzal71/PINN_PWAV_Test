@@ -1,0 +1,23 @@
+{
+  "beta_printed_precision_int_J_g": "0.01",
+  "beta_reproduction_rule": "ROUND_HALF_UP to 0.01 international J/g; unrounded absolute difference <=0.005 is also recorded.",
+  "human_review_status": "AI-assisted document and table review; no independent human sign-off",
+  "minimum_independent_enthalpy_molecules": 100,
+  "minimum_independent_training_enthalpy_molecules": 100,
+  "model_fits_performed": false,
+  "nist_gamma_policy": "The measured gamma values are frozen as raw calorimetric physics constraints, not direct enthalpy labels. A coupled model may impose gamma = DeltaH_vap + T*V_m*dp_sat/dT using only training-visible pressure information and model derivatives.",
+  "nist_historical_absolute_temperature_K": "298.160",
+  "nist_joule_conversion_factor": "1.000165",
+  "nist_nominal_modern_temperature_K": "298.15",
+  "nist_published_L_policy": "The 14 Osborne-Ginnings published L=gamma-beta values are sensitivity-only because beta is pressure-derived, two exact cited slope lineages remain unavailable, and 7 of 14 beta values are not reproduced at the printed 0.01 int J/g precision from the accessible archival inputs.",
+  "parent_manifest_sha256": "ae64e244eace5815ccf3fe6f39e5718dc83efda28867917e3c1e6a067f544a1a",
+  "parent_release_id": "enthalpy-source-review-v0.3.0-3993d357f0366ac8",
+  "parent_zip_sha256": "f9f57924c0842f7298282e8a92c20024aabfee8f8654c790037fcba86d07305a",
+  "pressure_conversion_Pa_per_mmHg": "133.32236842105263157894736842105263157894736842105",
+  "pressure_independence_definition": "Not inferred from a pressure-temperature slope/correlation or corrected using benchmark pressure labels. Raw gamma constraints are a separate coupled-physics tier and never count as direct H labels.",
+  "primary_label_policy": "Only verified direct enthalpy labels that satisfy the inherited v0.3 pressure-independence and provenance policy count toward the primary training gate.",
+  "review_date": "2026-09-18",
+  "review_scope": "Archival reconstruction of the 14 NIST beta corrections, pressure-source overlap audit, final tier decision, and freeze of raw gamma constraints. No model fitting and no split changes.",
+  "test_targets_used_for_label_decisions": false,
+  "version": "0.4.0"
+}

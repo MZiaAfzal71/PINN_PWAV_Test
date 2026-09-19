@@ -1,0 +1,13 @@
+{
+  "ChickosAcreeCompendiumVaporization.csv": "bf3d928535baa662849d0ced75acda117134c1cdc421facad2bd0f11b30a99ff",
+  "archive_xml_verification.json": "6c2876641c484ff6b28ec7745aa46102b088b2d8b25a03863cb1663714020d17",
+  "citations.json": "624d9220ac5e36cef0cb22baaa80e964706e833103211bdc0cc64ddb7af385f7",
+  "enthalpy_records.csv": "bf9ea6cf43c6ff0228f3f1d3982eef8a479206690fcb6223a89827a2b98f5a36",
+  "nist_metadata.json": "400a40833aba7d8de219ca18df1d522458125d6bf15479514603fffe5b778ecf",
+  "original_RDR_README.md": "dfae09723c12e727371801a0a8f8d4760970add39ae5478b1b91f44627c417bc",
+  "pressure_records.csv": "1e17837296e137b8baee7662e1f886aabdff2e533d988ca3163eca8475d23c38",
+  "rdr_metadata.json": "2b38a194f72e80f7d90d0643ef299070a99f19dd19d5a1b3ffba5420e9de3b20",
+  "source_review_examples.json": "97f0a30098a6e32f31f5422cda0945ffd2b4249286200f31d860d74b7e716bb3",
+  "thermoml_enthalpy_records.csv": "d1b534a8c7c859b5324ab36b3d11c7b1fb47f96a0ba3d30aafe872f4793be4fa",
+  "thermoml_provenance.jsonl": "439cf9077b3bc97c81f34ced5fa9f5a114d1ed327a20c7373984ff3c06bb3461"
+}

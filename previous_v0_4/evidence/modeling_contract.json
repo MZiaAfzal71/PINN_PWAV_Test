@@ -1,0 +1,12 @@
+{
+  "constraint_name": "raw_calorimetric_gamma_balance",
+  "direct_H_label": false,
+  "equation": "gamma_kJ_mol = H_vap_model_kJ_mol + T_K*V_m3_mol*dp_sat_dT_Pa_K/1000",
+  "log_pressure_form": "dp_sat/dT = p_sat*d(ln(p_sat/1Pa))/dT",
+  "loss_weighting": "No per-row gamma sigma is reported. Predeclare a common robust weight or tune only within training/validation without test targets.",
+  "partition": "train only",
+  "permitted_pressure_information": "Training-visible pressure observations and model/autodiff derivatives at the constraint state.",
+  "primary_gate": "The inherited 100-independent-training-molecule direct-H gate remains unchanged and is not satisfied by gamma constraints.",
+  "prohibited_pressure_information": "Frozen validation/test targets, test losses, and target-informed hyperparameter selection.",
+  "rows": 14
+}

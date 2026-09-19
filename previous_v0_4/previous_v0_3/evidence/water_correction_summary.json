@@ -1,0 +1,8 @@
+{
+  "arithmetic_mean_of_printed_corrected_runs_kJ_mol": "45.16483333333333333333333333",
+  "difference_from_published_fit_kJ_mol": "-0.00516666666666666666666667",
+  "interpretation": "Published result follows a joint fit for H and water solution enthalpy. Simple mean of rounded run values is not claimed to reproduce that fit exactly.",
+  "original_raw_unrounded_runs_available": false,
+  "published_fit_H_kJ_mol": "45.17",
+  "water_specific_enthalpy_used_as_printed_kJ_g": "2.433"
+}

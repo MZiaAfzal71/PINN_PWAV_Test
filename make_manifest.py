@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create the release manifest after rebuild and verification receipts exist."""
+"""Create the v0.5 release manifest after verification receipts exist."""
 from pathlib import Path
 import hashlib
 import json
@@ -20,9 +20,9 @@ content_fingerprint = hashlib.sha256(
     "\n".join(f"{path}\t{meta['sha256']}" for path, meta in files.items()).encode("utf-8")
 ).hexdigest()
 manifest = {
-    "version": "0.4.0",
+    "version": "0.5.0",
     "review_date": "2026-09-18",
-    "release_id": "enthalpy-source-review-v0.4.0-" + content_fingerprint[:16],
+    "release_id": "enthalpy-source-review-v0.5.0-" + content_fingerprint[:16],
     "scientific_readiness": "HOLD_ENTHALPY_PROVENANCE",
     "content_fingerprint_sha256": content_fingerprint,
     "files": files,

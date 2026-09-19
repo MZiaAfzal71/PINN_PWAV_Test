@@ -1,0 +1,17 @@
+{
+  "checked_on": "2026-09-18",
+  "decision": "No candidate row approved from metadata or secondary compilations. Full methods, tables, footnotes and corrections remain required.",
+  "doi": "10.1016/0021-9614(77)90202-6",
+  "metadata_sources_checked": [
+    "ScienceDirect",
+    "Crossref",
+    "OpenAlex",
+    "Semantic Scholar",
+    "NIST WebBook",
+    "general web search"
+  ],
+  "open_full_text_found": false,
+  "publisher_landing_page": "https://www.sciencedirect.com/science/article/pii/0021961477902026",
+  "status": "closed_full_text_not_obtained",
+  "title": "Enthalpies of vaporization of some 1-substituted n-alkanes"
+}

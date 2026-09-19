@@ -1,0 +1,50 @@
+{
+  "additional_training_molecules_needed": 64,
+  "approved_atomic_components": 1,
+  "approved_distinct_temperatures_K": [
+    "298.15"
+  ],
+  "approved_labels": 37,
+  "approved_laboratories": 1,
+  "approved_rows_inside_pressure_temperature_envelope": 23,
+  "approved_test_labels": 0,
+  "approved_training_molecules": 36,
+  "approved_validation_labels": 0,
+  "baseline_unchanged": true,
+  "cold_episode_counts": {
+    "test": 78,
+    "train": 292,
+    "validation": 66
+  },
+  "decision_counts": {
+    "approve_primary_calorimetry": 37,
+    "hold_abstract_only": 8,
+    "hold_ambiguous_reference_code": 21,
+    "hold_full_text_not_obtained": 102,
+    "hold_reference_assignment_unresolved": 4,
+    "hold_secondary_temperature_corrected_value": 1,
+    "hold_source_reported_conflict": 1,
+    "quarantine_archive_calorimetry": 13,
+    "quarantine_compendium_provenance": 562,
+    "quarantine_same_source_conflict": 2
+  },
+  "direct_measurement_table_rows_verified": 38,
+  "full_measurement_papers_verified": 4,
+  "model_fits_performed": false,
+  "note": "37 labels represent 36 molecular identities, not 37 independent laboratories or source components. Verified provenance does not establish universal accuracy or ideal-vapor validity.",
+  "primary_coverage_required_training_molecules": 100,
+  "primary_test_target_rows": 512,
+  "priority_candidate_molecules": 100,
+  "priority_candidate_rows": 174,
+  "priority_codes_reviewed_for_access_and_identity": 14,
+  "referenced_apparatus_papers_verified": 2,
+  "remaining_quarantined_candidates": 714,
+  "review_date": "2026-09-17",
+  "split_counts": {
+    "test": 105,
+    "train": 492,
+    "validation": 106
+  },
+  "status": "HOLD_ENTHALPY_PROVENANCE",
+  "version": "0.2.0"
+}

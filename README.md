@@ -1,34 +1,41 @@
-# Enthalpy source verification v0.4.0
+# Enthalpy source verification v0.5.0
 
-**The strict direct-enthalpy pool remains 42 labels on 41 training molecules. The inherited 100-molecule gate is still 59 molecules short, so main model fitting remains on hold.** No split changed and no model was fitted.
+**The strict direct-enthalpy pool remains frozen at 42 labels on 41 training molecules. The 100-molecule gate is still 59 molecules short, so main model fitting remains on hold.** No label, molecular split, evaluation episode, or pressure record changed, and no model was fitted.
 
-This release completes the archival follow-up for 14 values from Osborne and Ginnings (1947). The published latent heat is `L = gamma - beta`, where `gamma` is the measured electrical energy per withdrawn mass and `beta = T v dp_sat/dT` is calculated from vapor-pressure and liquid-volume data.
+This release completes the next source-access and identity-verification step:
 
-The result is a two-tier freeze:
+| Source | Candidate rows | Potential additional molecules | Verification reached | Decision |
+|---|---:|---:|---|---|
+| `1977MAN/SEL` | 13 | 12 | DOI, publisher metadata, and abstract; full article not obtained | Hold all rows |
+| `1926MAT` | 12 | 5 | Article identity and DOI; full article not obtained | Hold all rows |
+| `1996VIT/CHA` | 19 | 5 | Bibliographic code resolved; official related chapter abstract checked; primary numeric table not obtained | Hold all rows |
 
-- All 14 published `L` values are **sensitivity-only**. They cannot enter primary training, validation, or test.
-- All 14 measured `gamma` values are frozen as **coupled PINN physics constraints**, not as direct enthalpy labels.
+The `1996VIT/CHA` reference code maps to C. Viton, M. Chavret, and J. Jose, *ELDATA: International Electronic Journal of Physico-Chemical Data* **2**, 103 (1996). A later official Springer chapter by the same authors is titled *Enthalpy of Vaporization of N-Alkanes (from Nonane to Pentadecane). Experimental Results - Correlation*, DOI `10.1007/978-3-642-72207-3_3`.
 
-The accessible archival inputs reproduce 7 of the 14 printed beta values by nearest 0.01 international J/g rounding. Seven do not reproduce at that precision. Twelve pressure-slope inputs are present in the cited API table family; the n-nonane and n-decane slopes use an accessible 1945 primary correlation as a surrogate because the exact cited per-compound entries were not recovered. All 14 liquid-volume inputs are traced.
+The official chapter abstract reports calorimetric measurements over **313–344 K**. Of the 19 compiled candidates:
+
+- 14 lie inside that reported interval;
+- four lie below it at 299 K; and
+- one lies above it at 359 K.
+
+The 14 in-window rows are plausible experimental observations, but the exact primary table, method details, uncertainty or precision statement, and correction lineage were not available. The five out-of-window rows cannot be classified as direct measurements rather than literature, normalized, interpolated, correlated, or extrapolated values. Therefore **zero rows are promoted**.
 
 | Use | File |
 |---|---|
 | Unchanged strict direct-H labels | `frozen/enthalpy_primary_labels.csv` |
-| Unchanged unique strict training molecules | `frozen/training_enthalpy_molecules.csv` |
 | Current decisions for all 751 candidates | `frozen/enthalpy_candidates_reviewed.csv` |
-| Published NIST L values, sensitivity only | `frozen/enthalpy_nist_sensitivity_labels.csv` |
-| Raw NIST gamma physics constraints | `frozen/enthalpy_nist_gamma_constraints.csv` |
-| Compound-level beta reconstruction | `evidence/nist_ancillary_reconstruction.csv` |
-| Molecule-level pressure-source overlap check | `evidence/nist_pressure_lineage_overlap.csv` |
-| Constraint equation and leakage rules | `PINN_CONSTRAINT_PROTOCOL.md`, `evidence/modeling_contract.json` |
-| Full findings and limitations | `SOURCE_REVIEW_REPORT.md` |
-| Remaining source-verification queue | `review/remaining_verification_queue.csv` |
+| Row-level Viton–Chavret decisions | `review/viton_chavret_candidate_decisions.csv` |
+| Source identity assertions and limits | `evidence/source_identity_resolution.csv` |
+| Access audit for the three closed-source targets | `evidence/source_access_audit.csv` |
+| Full scientific findings | `SOURCE_REVIEW_REPORT.md` |
+| Exact documents/pages needed next | `PRIMARY_SOURCE_REQUEST.md` |
+| Remaining verification queue | `review/remaining_verification_queue.csv` |
 
-The complete v0.3 release is preserved under `previous_v0_3/`, including the original v0.1 pressure data, molecular splits, and evaluation tables. Do not concatenate historical and current label exports.
+The complete v0.4 release is preserved under `previous_v0_4/`, including the NIST gamma physics-constraint tier and the original frozen pressure evaluation design. Historical and current label exports must not be concatenated.
 
 ## Verify
 
-Only the Python standard library is required for the v0.4 calculations:
+Only the Python 3.12 standard library is required:
 
 ```bash
 python rebuild_review.py
@@ -36,6 +43,6 @@ python verify_review.py
 python check_readiness.py
 ```
 
-`verify_review.py` must report `PASS`. `check_readiness.py` intentionally exits with status 2 and reports `HOLD_ENTHALPY_PROVENANCE` because the strict direct-H gate is not yet met.
+`verify_review.py` must report `PASS`. `check_readiness.py` intentionally exits with status 2 and reports `HOLD_ENTHALPY_PROVENANCE` while the strict coverage gate remains unmet.
 
-The source PDFs are not redistributed. Their official URLs, SHA256 hashes, page locators, and roles are recorded in `evidence/archival_document_register.json`. This is an AI-assisted document and table review without independent human sign-off.
+Source PDFs are not redistributed. URLs and access limits are recorded, and every metadata-only inference remains explicitly separated from primary-table verification. This is an AI-assisted review without independent human sign-off.

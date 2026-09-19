@@ -1,12 +1,13 @@
 {
   "additional_training_molecules_needed": 59,
-  "checks_passed": 2063,
-  "nist_beta_matches": 7,
-  "nist_beta_mismatches": 7,
-  "nist_gamma_constraints": 14,
+  "checks_passed": 1803,
   "scientific_readiness": "HOLD_ENTHALPY_PROVENANCE",
-  "scope": "Integrity, exact mappings, archival-input arithmetic, tier separation, and split/leakage checks; not independent experimental replication.",
+  "scope": "Integrity, exact mappings, source-access claims, row-level temperature-window classification, freeze invariants, and split checks; not independent experimental replication.",
   "status": "PASS",
   "strict_primary_labels": 42,
-  "strict_primary_training_molecules": 41
+  "strict_primary_training_molecules": 41,
+  "viton_chavret_candidate_rows": 19,
+  "viton_chavret_labels_promoted": 0,
+  "viton_chavret_rows_in_window": 14,
+  "viton_chavret_rows_outside_window": 5
 }

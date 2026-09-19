@@ -1,0 +1,2 @@
+reference_code,candidate_rows,candidate_molecules,strict_primary_labels_added,sensitivity_labels_frozen,gamma_constraints_frozen,final_status,decision_basis
+1947OSB/GIN,14,14,0,14,14,archival_audit_complete_sensitivity_L_and_gamma_constraint_tier,Pressure-derived beta; two surrogate pressure-slope lineages; seven of fourteen beta values fail printed-precision reconstruction.

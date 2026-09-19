@@ -1,9 +1,9 @@
 {
-  "manifest_files_verified": 110,
-  "manifest_sha256": "ae64e244eace5815ccf3fe6f39e5718dc83efda28867917e3c1e6a067f544a1a",
-  "release_id": "enthalpy-source-review-v0.3.0-3993d357f0366ac8",
+  "manifest_files_verified": 141,
+  "manifest_sha256": "9578b9c5fb873db60bc937ba8840b7dab9fb1002f96621cdaffd365d28f936d1",
+  "release_id": "enthalpy-source-review-v0.4.0-0d79215203be511f",
   "status": "PASS",
   "strict_label_csv_sha256": "ed21842873d54be576edf6d14732f657eb8ca7e7def26739a9cb90df01d32045",
   "strict_molecule_csv_sha256": "cc2f0c1a6a7dd4908f0c89c1f431456c39f933e9be34b14b916a7bb92dc9bc44",
-  "zip_sha256": "f9f57924c0842f7298282e8a92c20024aabfee8f8654c790037fcba86d07305a"
+  "zip_sha256": "97380df25c322f0214c15e017c8099ea7c47ec789f4aaf6220d26b9dcb5f8469"
 }

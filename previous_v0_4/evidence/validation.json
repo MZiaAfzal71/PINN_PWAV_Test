@@ -1,0 +1,12 @@
+{
+  "additional_training_molecules_needed": 59,
+  "checks_passed": 2063,
+  "nist_beta_matches": 7,
+  "nist_beta_mismatches": 7,
+  "nist_gamma_constraints": 14,
+  "scientific_readiness": "HOLD_ENTHALPY_PROVENANCE",
+  "scope": "Integrity, exact mappings, archival-input arithmetic, tier separation, and split/leakage checks; not independent experimental replication.",
+  "status": "PASS",
+  "strict_primary_labels": 42,
+  "strict_primary_training_molecules": 41
+}

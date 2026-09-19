@@ -1,0 +1,7 @@
+{
+  "models_fitted": false,
+  "nist_gamma": "Use only as the specified coupled physics residual; never concatenate with direct H labels.",
+  "nist_published_L": "Exclude from primary training, validation and test; use all 14 together only in a separately reported sensitivity analysis.",
+  "primary_analysis": "Use only frozen/enthalpy_primary_labels.csv after the project gate is met.",
+  "selection_timing": "The tier decision was frozen before model fitting and without target-performance information."
+}

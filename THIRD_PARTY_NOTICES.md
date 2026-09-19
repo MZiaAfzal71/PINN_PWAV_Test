@@ -1,25 +1,16 @@
-# Third-party sources and notices
+# Third-party source notices
 
-This release contains transcribed numerical facts, provenance metadata, hashes, and original analysis. It does not redistribute the reviewed source PDFs.
+This release contains project-generated metadata, hashes, transcriptions, classifications, and review decisions. It does not redistribute the cited publisher PDFs or scans.
 
-## Osborne and Ginnings, 1947
+## Sources used in the v0.5 decision
 
-N. S. Osborne and D. C. Ginnings, “Measurements of heat of vaporization and heat capacity of a number of hydrocarbons,” *Journal of Research of the National Bureau of Standards* 39, 453–477 (1947), DOI 10.6028/JRES.039.031. Official NIST access and exact file hash are recorded in `evidence/archival_document_register.json`.
+- W. E. Acree Jr. and J. S. Chickos, *Phase Transition Enthalpy Measurements of Organic and Organometallic Compounds. Sublimation, Vaporization and Fusion Enthalpies From 1880 to 2015. Part 1. C1–C10* (2016). The UNT Digital Library page is used to resolve the `1996VIT/CHA` bibliography entry: `https://digital.library.unt.edu/ark:/67531/metadc967174/m1/540/`.
+- C. Viton, M. Chavret, and J. Jose, *Enthalpy of Vaporization of N-Alkanes (from Nonane to Pentadecane). Experimental Results - Correlation* (1998), DOI `10.1007/978-3-642-72207-3_3`. Only publisher metadata and the public abstract were used; the chapter is subscription content.
+- M. Månsson et al., *Enthalpies of vaporization of some 1-substituted n-alkanes* (1977), DOI `10.1016/0021-9614(77)90202-6`. Only discoverable metadata/abstract information was used in this release.
+- J. H. Mathews, *The Accurate Measurement of Heats of Vaporization of Liquids* (1926), DOI `10.1021/ja01414a002`. Only article-identity metadata was used in this release.
 
-## NBS Circular 461
+Copyright in third-party publications remains with the respective authors and publishers. Users must obtain those documents through lawful sources and comply with their terms.
 
-F. D. Rossini et al., *Selected Values of Properties of Hydrocarbons*, NBS Circular 461 (1947), DOI 10.6028/NBS.CIRC.461. Used for API Research Project 44 molecular-volume and Antoine tables and the archived temperature convention.
+## Inherited sources
 
-## Willingham et al., 1945
-
-C. B. Willingham, W. J. Taylor, J. M. Pignocco, and F. D. Rossini, “Vapor pressures and boiling points of some paraffin, alkylcyclopentane, alkylcyclohexane, and alkylbenzene hydrocarbons,” *Journal of Research of the National Bureau of Standards* 35, 219–244 (1945). Used as the accessible primary surrogate for n-nonane and n-decane Antoine correlations.
-
-## International Critical Tables
-
-*International Critical Tables of Numerical Data, Physics, Chemistry and Technology*, volume III (1928). The public-domain Internet Archive scan was used for the density equation and n-decane coefficients.
-
-## Parent datasets
-
-The complete notices for the ThermoML-derived pressure data, Chickos-Acree compilation inputs, RDKit-derived identifiers, and previously reviewed calorimetry sources are preserved in `previous_v0_3/THIRD_PARTY_NOTICES.md` and its nested parent release.
-
-Source names and citations are provided for scholarly attribution. No endorsement by NIST, the original authors, publishers, API, or Internet Archive is implied.
+The prior source notices, including ThermoML/NIST and archival calorimetry documents, are preserved in `previous_v0_4/THIRD_PARTY_NOTICES.md`. No additional rights are granted by this release.

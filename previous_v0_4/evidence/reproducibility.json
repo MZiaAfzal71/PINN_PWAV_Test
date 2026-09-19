@@ -1,0 +1,28 @@
+{
+  "command": "python rebuild_review.py",
+  "files_sha256": {
+    "evidence/access_followup.json": "bc5f9da4dd3e3d61b320fdeea98f99a990866581b5394c45addd16d505e36cc8",
+    "evidence/archival_document_register.json": "e7554dc3d3e24332a275eeeaf7ef9911e3cc3366390e2e1a04d2b7578e922c7c",
+    "evidence/archival_source_overlap.csv": "dd57f6adddff1fcc24c778f27074d4bae3c259582d4e34ceb825af818e3841f1",
+    "evidence/modeling_contract.json": "6bafeb2a9082a098d28c30bb49bf8ba1125b96a78ad6af89029d4d7d998648bf",
+    "evidence/nist_ancillary_reconstruction.csv": "0278b0c0b5fcd896eb3d6f5b4ef200a9655530f763c309af3dc6498e76b1d73d",
+    "evidence/nist_gamma_constraint_checks.csv": "ed856f6921d4383b65531359104ecef6464bd17bc1003312f470c4f24ec317a7",
+    "evidence/nist_pressure_lineage_overlap.csv": "bfd16c1c6003737f3c5b7800522ba514744c5c019f35e167b0ec740d13e9e5ff",
+    "evidence/parent_release_receipt.json": "fbf5e97efefb41ec229076f8a585505007f51235c164d2a15e9ff3aba2abc0a8",
+    "evidence/sensitivity_policy.json": "a1bdaa827763212045ec136ac802d37e557e79bca0e74ce5c1d05e035be35044",
+    "frozen/enthalpy_candidates_reviewed.csv": "ed76563faf7507023cee5e7dd89fc3e5f497499024918974cb5081a4600c0f28",
+    "frozen/enthalpy_nist_ancillary_hold.csv": "ed0a1de4046315fe4ab98b9a39c8007d1a32016b3f8997db379c084bf39e19a4",
+    "frozen/enthalpy_nist_gamma_constraints.csv": "0648527d1972d2627437557706dcfd6b0b24b38210faf5974ef35fdb95670ce7",
+    "frozen/enthalpy_nist_sensitivity_labels.csv": "70b237b881e56f632c0ba5b4d14cdc8fbb52e92ae9deb8e7deb6274658bb6007",
+    "frozen/enthalpy_primary_labels.csv": "ed21842873d54be576edf6d14732f657eb8ca7e7def26739a9cb90df01d32045",
+    "frozen/summary.json": "db9a4bb0c05e7733216e5525fd9a2cb662871fa57dc213e0f24f7e660bf6263d",
+    "frozen/training_enthalpy_molecules.csv": "cc2f0c1a6a7dd4908f0c89c1f431456c39f933e9be34b14b916a7bb92dc9bc44",
+    "review/remaining_verification_queue.csv": "d251c27b8d0bdbea368946c834d805b83c4763aa88109f3f087c36249a36e0ef",
+    "review/resolved_source_decisions.csv": "df90aef31e4f902004d2e13dbd8051623bbdfcecd183465e1788410f6076b36e"
+  },
+  "outputs_byte_identical": 18,
+  "python_requirement": "3.12 standard library",
+  "runs_compared": 2,
+  "scope": "Deterministic regeneration from the frozen v0.3 parent and versioned archival transcriptions; not independent scientific replication.",
+  "status": "PASS"
+}

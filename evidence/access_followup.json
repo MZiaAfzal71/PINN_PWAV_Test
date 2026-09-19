@@ -1,17 +1,50 @@
 {
-  "checked_on": "2026-09-18",
-  "decision": "No candidate row approved from metadata or secondary compilations. Full methods, tables, footnotes and corrections remain required.",
-  "doi": "10.1016/0021-9614(77)90202-6",
-  "metadata_sources_checked": [
-    "ScienceDirect",
-    "Crossref",
-    "OpenAlex",
-    "Semantic Scholar",
-    "NIST WebBook",
-    "general web search"
-  ],
-  "open_full_text_found": false,
-  "publisher_landing_page": "https://www.sciencedirect.com/science/article/pii/0021961477902026",
-  "status": "closed_full_text_not_obtained",
-  "title": "Enthalpies of vaporization of some 1-substituted n-alkanes"
+  "conclusion": "No full primary document was obtained for the three closed-source targets. Metadata and abstracts were used only for access, identity, and temperature-window triage; zero labels were promoted.",
+  "review_date": "2026-09-18",
+  "sources": [
+    {
+      "access_finding": "Article identity and abstract are discoverable; the complete methods, tables, footnotes, uncertainty, and correction lineage were not obtained.",
+      "access_level": "publisher_metadata_and_abstract_only",
+      "canonical_url": "https://doi.org/10.1016/0021-9614(77)90202-6",
+      "full_primary_text_obtained": "False",
+      "label_decision": "hold_all_13_candidates",
+      "methods_obtained": "False",
+      "primary_numeric_table_obtained": "False",
+      "reference_code": "1977MAN/SEL",
+      "work": "Månsson et al. (1977), Enthalpies of vaporization of some 1-substituted n-alkanes"
+    },
+    {
+      "access_finding": "Article identity and DOI are resolved; the complete primary article was not obtained in this review.",
+      "access_level": "publisher_identity_only",
+      "canonical_url": "https://doi.org/10.1021/ja01414a002",
+      "full_primary_text_obtained": "False",
+      "label_decision": "hold_all_12_candidates",
+      "methods_obtained": "False",
+      "primary_numeric_table_obtained": "False",
+      "reference_code": "1926MAT",
+      "work": "Mathews (1926), The Accurate Measurement of Heats of Vaporization of Liquids"
+    },
+    {
+      "access_finding": "The compendium bibliography resolves the shorthand citation, but the 1996 ELDATA full text was not obtained.",
+      "access_level": "secondary_bibliographic_mapping",
+      "canonical_url": "https://digital.library.unt.edu/ark:/67531/metadc967174/m1/540/",
+      "full_primary_text_obtained": "False",
+      "label_decision": "hold_all_19_candidates",
+      "methods_obtained": "False",
+      "primary_numeric_table_obtained": "False",
+      "reference_code": "1996VIT/CHA",
+      "work": "Viton, Chavret, and Jose, ELDATA: Int. Electron. J. Phys.-Chem. Data 2, 103 (1996)"
+    },
+    {
+      "access_finding": "The official abstract reports calorimetric measurements for C9-C15 over 313-344 K and comparison with literature and predicted values; equivalence to the 1996 ELDATA item and exact row roles are unverified.",
+      "access_level": "official_publisher_abstract_subscription_content",
+      "canonical_url": "https://doi.org/10.1007/978-3-642-72207-3_3",
+      "full_primary_text_obtained": "False",
+      "label_decision": "temperature_window_triage_only_no_label_promotion",
+      "methods_obtained": "False",
+      "primary_numeric_table_obtained": "False",
+      "reference_code": "1996VIT/CHA_RELATED_1998",
+      "work": "Viton, Chavret, and Jose (1998), Enthalpy of Vaporization of N-Alkanes (from Nonane to Pentadecane). Experimental Results - Correlation"
+    }
+  ]
 }

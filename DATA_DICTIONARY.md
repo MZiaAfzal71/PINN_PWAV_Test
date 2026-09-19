@@ -1,106 +1,77 @@
 # Data dictionary
 
-CSV files use UTF-8, comma delimiters, one header row, `.` as the decimal mark, and explicit `True`/`False` strings for Boolean fields. Energies labeled `int_J_g` are US international joules per gram as printed in the 1947 paper. Fields labeled `abs_kJ_mol` apply the recorded 1.000165 conversion and the explicit molar mass.
+CSV files use UTF-8, comma delimiters, one header row, `.` as the decimal mark, and explicit `True`/`False` strings for Boolean fields. Candidate enthalpies are in kJ/mol and temperatures are in K unless stated otherwise.
 
 ## `frozen/enthalpy_primary_labels.csv`
 
-The strict direct-enthalpy export. It is byte-identical to v0.3 and contains 42 observations on 41 training molecules. These are the only current labels allowed in the primary direct-H loss. Its inherited columns are documented in `previous_v0_3/DATA_DICTIONARY.md`.
+The strict direct-enthalpy export. It is byte-identical to v0.4 and contains 42 observations on 41 training molecules. These are the only current labels permitted in the primary direct-H loss.
 
 ## `frozen/enthalpy_candidates_reviewed.csv`
 
-All 751 frozen candidate rows and their current decision. Identity, molecule, component, and split fields are unchanged from v0.3.
+All 751 candidate rows and their current decision. Identity, value, molecule, component, and split fields are unchanged from v0.4.
 
-| New field | Meaning |
+| v0.5 field | Meaning |
 |---|---|
-| `v0_4_tier` | `strict_primary_label`, `sensitivity_L_plus_gamma_physics_constraint`, or inherited hold/quarantine. |
-| `v0_4_gamma_constraint_ready` | Whether a separate raw-gamma constraint is complete. This never means the row is a direct H label. |
-| `v0_4_beta_reconstruction_status` | Compound-level outcome of the archival beta audit. |
-| `v0_4_review_note` | Short statement of the v0.4 action. |
+| `v0_5_source_identity_status` | Whether the v0.5 source-identity audit applies and its result. |
+| `v0_5_temperature_window_status` | `within_reported_measurement_window`, `outside_reported_measurement_window_below`, `outside_reported_measurement_window_above`, or `not_applicable`. |
+| `v0_5_primary_table_verified` | Whether the exact primary numeric table was checked; false for all 19 `1996VIT/CHA` rows. |
+| `v0_5_training_allowed` | Current row-level training permission after this review. |
+| `v0_5_review_note` | Concise source-role assessment or inheritance note. |
 
-For the 14 NIST rows, `training_allowed=False` and `independent_of_pressure_verified=False` remain mandatory.
+For the 19 `1996VIT/CHA` records, `training_allowed=False`, `independent_of_pressure_verified=False`, `primary_numeric_table_verified=False`, and `full_primary_methods_verified=False` are mandatory.
 
-## `frozen/enthalpy_nist_sensitivity_labels.csv`
+## `review/viton_chavret_candidate_decisions.csv`
 
-The 14 published `L = gamma - beta` values, isolated from the primary pool.
+One row per `1996VIT/CHA` candidate.
 
 | Field | Meaning |
 |---|---|
-| `published_gamma_int_J_g` | Mean measured energy per withdrawn mass. |
-| `published_beta_int_J_g` | Source-applied pressure-slope correction. |
-| `published_L_int_J_g` | Printed latent heat after subtraction. |
-| `published_L_abs_kJ_mol` | Recorded molar conversion of printed L. |
-| `beta_reconstruction_status` | Whether accessible inputs reproduce beta at 0.01 J/g and whether the exact source lineage is complete. |
-| `archival_lineage_complete` | True only when the chosen slope and volume sources belong to the exact source pair cited for the correction. |
-| `label_tier` | Always `sensitivity_only_published_L`. |
-| `use_for_primary_training` | Always false. |
-| `use_for_validation`, `use_for_test` | Always false. |
-| `use_for_sensitivity_analysis` | Always true; use all 14 as one prespecified tier. |
-| `do_not_mix_with_primary_labels` | Always true. |
+| `H_kJ_mol`, `T_K` | Unchanged compiled candidate value and temperature. |
+| `method_code_from_compendium` | Method code copied from the source compendium; not independently reinterpreted as primary proof. |
+| `reported_measurement_T_min_K`, `reported_measurement_T_max_K` | Inclusive 313–344 K range from the official related-chapter abstract. |
+| `temperature_window_status` | Mechanical comparison of candidate `T_K` with that interval. |
+| `inside_reported_measurement_window` | True only for 313 ≤ T ≤ 344 K. |
+| `source_role_assessment` | Separates plausible in-window observations from out-of-window records of unresolved role. |
+| `bibliographic_identity_resolved` | The shorthand code has a verified secondary-bibliography mapping. |
+| `primary_full_text_obtained` | False for all rows. |
+| `exact_primary_numeric_table_verified` | False for all rows. |
+| `pressure_correction_lineage_verified` | False for all rows; absence of proof is not treated as pressure independence. |
+| `training_allowed` | False for all rows. |
+| `approval_blocker` | Exact evidence still needed before reconsideration. |
 
-## `frozen/enthalpy_nist_gamma_constraints.csv`
+`evidence/source_temperature_window_audit.csv` is byte-identical to this table.
 
-Fourteen raw calorimetric constraints for a future coupled pressure-enthalpy PINN.
+## `evidence/source_identity_resolution.csv`
 
-| Field | Unit or meaning |
-|---|---|
-| `gamma_int_J_g` | Printed US international J/g. |
-| `gamma_abs_kJ_mol` | Converted absolute kJ/mol. |
-| `T_K_model_coordinate` | 298.15 K, retained for compatibility with the frozen model coordinates. |
-| `T_K_historical_absolute_for_source_arithmetic` | 298.160 K, the archived absolute-temperature convention. |
-| `molar_volume_25C_mL_mol` | Traced liquid molar volume used by the constraint. |
-| `molar_volume_25C_m3_mol` | Same volume in SI. |
-| `constraint_equation` | Molar raw-observable balance. |
-| `pressure_derivative_definition` | Stable form for a log-pressure model. |
-| `constraint_ready` | Required fields and volume provenance are present. |
-| `direct_enthalpy_label`, `primary_training_label`, `evaluation_label` | Always false. |
-| `held_out_pressure_targets_permitted` | Always false. |
-| `training_visible_pressure_or_model_derivative_only` | Always true. |
-| `uncertainty_status` | Prevents invented rowwise sigma or inverse-variance weighting. |
+Four independently scoped assertions:
 
-## `review/nist_ancillary_inputs.csv`
+- the 1996 shorthand-to-bibliography mapping;
+- the official 1998 related chapter metadata;
+- the official abstract's experimental interval; and
+- the explicitly unverified equivalence of the 1996 and 1998 documents.
 
-Versioned manual transcriptions used by `rebuild_review.py`.
+`status` describes the evidence level. `strict_label_implication` prevents bibliographic or abstract evidence from being mistaken for numeric-table verification.
 
-| Field | Meaning |
-|---|---|
-| `molar_volume_25C_mL_mol` | Printed API molar volume; blank for n-decane because its volume is derived from density. |
-| `volume_source_key`, `volume_source_locator` | Document key and exact table/page location. |
-| `vapor_pressure_source_key`, `vapor_pressure_source_locator` | Document key and exact Antoine-table location. |
-| `antoine_A`, `antoine_B`, `antoine_C_C` | Constants in `log10(p_mmHg)=A-B/(C+t_C)`. |
-| `vapor_pressure_source_directly_in_cited_beta_pair` | False for the two accessible surrogate correlations. |
-| `density_d0_g_mL`, `density_alpha`, `density_beta`, `density_gamma`, `density_t0_C` | ICT density-equation inputs for n-decane. |
+## `review/source_access_inputs.csv` and `evidence/source_access_audit.csv`
 
-## `evidence/nist_ancillary_reconstruction.csv`
+Versioned access receipts for Månsson 1977, Mathews 1926, the 1996 ELDATA item, and the related 1998 Springer chapter. They record the exact access level and whether full text, methods, or numeric tables were obtained. The evidence export is regenerated from the review input.
 
-The complete compound-level arithmetic receipt.
+## `review/remaining_verification_queue.csv`
 
-| Field | Meaning |
-|---|---|
-| `p_sat_25C_mmHg` | Pressure calculated from the archived Antoine equation. |
-| `dp_sat_dT_25C_mmHg_K` | Analytic derivative at 25 °C. |
-| `specific_volume_25C_cm3_g` | Liquid specific volume used in beta. |
-| `reconstructed_beta_int_J_g` | `T v dp/dT`, in international-J/g-compatible source units. |
-| `signed_difference_reconstructed_minus_published_int_J_g` | Unrounded signed discrepancy. |
-| `nearest_0.01_half_up_int_J_g` | Primary printed-precision comparison. |
-| `nearest_0.01_matches_published` | Frozen match decision. |
-| `within_unrounded_half_cent` | Independent tolerance receipt. |
-| `truncated_0.01_int_J_g`, `truncation_matches_published` | Diagnostic only; not the primary rule. |
-| `reconstruction_status` | Combines numerical agreement and exact/surrogate lineage. |
+The inherited source queue with updated access and triage statuses. `candidate_rows` and `additional_unapproved_training_molecules` are opportunities, not guaranteed additions and must not be summed across overlapping reference codes.
 
-## `evidence/nist_pressure_lineage_overlap.csv`
+## Inherited v0.4 files
 
-One row per NIST molecule. Counts and temperature ranges are computed from the deduplicated frozen pressure table. DOI overlap fields compare the archival documents with the frozen pressure sources. A false overlap flag is a leakage receipt, not proof of thermodynamic independence.
+The NIST sensitivity labels, gamma constraints, ancillary reconstruction, pressure-lineage checks, modeling contract, and sensitivity policy are byte-identical to v0.4. Their definitions are in `previous_v0_4/DATA_DICTIONARY.md`.
 
 ## JSON evidence
 
-- `archival_document_register.json`: title, year, role, URLs, SHA256, and locators for each checked document. PDFs are not bundled.
-- `modeling_contract.json`: machine-readable constraint equation and leakage rules.
-- `sensitivity_policy.json`: primary, sensitivity, and gamma-tier use restrictions.
-- `parent_release_receipt.json`: v0.3 hashes and verification result.
-- `access_followup.json`: current full-text status for Månsson et al. (1977).
-- `validation.json`: software verification result.
-- `reproducibility.json`: byte-identical rebuild receipt.
+- `access_followup.json`: structured copy of the four access receipts and the no-promotion conclusion.
+- `parent_release_receipt.json`: v0.4 manifest, archive, strict-label, and molecule-list hashes.
+- `validation.json`: software-verification result.
+- `reproducibility.json`: repeated-rebuild hash comparison.
+- `frozen/summary.json`: machine-readable current counts and readiness status.
 
 ## Historical files
 
-`previous_v0_3/` is an immutable copy of the complete parent release. The pressure observations, split assignments, episodes, anchors, and cold targets used here are under `previous_v0_3/baseline_v0_1/frozen/`.
+`previous_v0_4/` is an immutable complete copy of the parent release. It already contains the earlier releases and the original pressure observations, splits, episodes, anchors, and cold targets.

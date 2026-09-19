@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Report the inherited direct-enthalpy gate; exit 2 while it is unmet."""
+"""Report the strict direct-enthalpy gate; exit 2 while it is unmet."""
 from pathlib import Path
 import csv
 import hashlib
@@ -41,7 +41,9 @@ def main():
         "additional_training_molecules_needed": max(0, required - len(molecules)),
         "nist_gamma_constraints": 14,
         "gamma_constraints_count_toward_direct_H_gate": False,
-        "reason": "The inherited project gate requires 100 training molecules with strict direct-H labels; raw gamma constraints and sensitivity-only published L values do not count.",
+        "viton_chavret_candidate_rows_reviewed": 19,
+        "viton_chavret_labels_count_toward_direct_H_gate": 0,
+        "reason": "The inherited gate requires 100 training molecules with verified direct-H labels. Metadata/abstract-only rows, raw gamma constraints, and sensitivity-only labels do not count.",
     }
     print(json.dumps(result, indent=2, sort_keys=True))
     return 0 if ready else 2

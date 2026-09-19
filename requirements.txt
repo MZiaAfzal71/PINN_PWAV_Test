@@ -1,1 +1,1 @@
-# v0.4 rebuild and verification use only the Python 3.12 standard library.
+# v0.5 rebuild and verification use only the Python 3.12 standard library.

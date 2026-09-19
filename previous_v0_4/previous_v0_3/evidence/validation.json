@@ -1,0 +1,9 @@
+{
+  "additional_training_molecules_needed": 59,
+  "approved_labels": 42,
+  "approved_training_molecules": 41,
+  "checks_passed": 2273,
+  "scientific_readiness": "HOLD_ENTHALPY_PROVENANCE",
+  "scope": "Integrity, mapping and arithmetic checks. Scientific decisions are evidenced manual/AI-assisted inputs, not established by these software checks.",
+  "status": "PASS"
+}

@@ -14,7 +14,7 @@
   "nist_published_L_sensitivity_labels": 14,
   "nist_rows_audited": 14,
   "nist_surrogate_slope_lineages": 2,
-  "note": "The direct-H gate remains at 42 labels on 41 molecules. Published NIST L values are sensitivity-only; raw gamma values are a distinct coupled-physics tier and are not enthalpy labels.",
+  "note": "The strict direct-H pool remains 42 labels on 41 molecules. The 1996VIT/CHA shorthand is resolved and 19 rows are temperature-window-triaged, but no primary numeric table was obtained and no row is promoted.",
   "primary_test_anchor_rows": 234,
   "primary_test_episodes": 78,
   "primary_test_target_rows": 512,
@@ -28,8 +28,17 @@
   },
   "status": "HOLD_ENTHALPY_PROVENANCE",
   "strict_pool_changed_from_v0_3": false,
+  "strict_pool_changed_from_v0_4": false,
   "strict_primary_labels": 42,
   "strict_primary_training_molecules": 41,
   "test_targets_used_for_label_decisions": false,
-  "version": "0.4.0"
+  "version": "0.5.0",
+  "viton_chavret_candidate_molecules": 5,
+  "viton_chavret_candidate_rows_audited": 19,
+  "viton_chavret_eldata_springer_equivalence_verified": false,
+  "viton_chavret_primary_full_text_obtained": false,
+  "viton_chavret_rows_above_reported_measurement_window": 1,
+  "viton_chavret_rows_below_reported_measurement_window": 4,
+  "viton_chavret_rows_inside_reported_measurement_window": 14,
+  "viton_chavret_strict_labels_added": 0
 }
