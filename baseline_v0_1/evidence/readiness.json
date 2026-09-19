@@ -1,0 +1,10 @@
+{
+  "certified_independent_enthalpy_molecules": 0,
+  "certified_independent_training_enthalpy_molecules": 0,
+  "next_action": "Resolve the source review queue and create a reviewed successor release. Retain current split IDs; if newly discovered lineage bridges splits, embargo affected records or explicitly version the split change before training.",
+  "observed_exit_code": 2,
+  "reason": "Primary methods, measurement/reference temperature, phase/state, uncertainty convention and pressure-independent correction lineage must be documented per label.",
+  "required_total": 100,
+  "required_train": 100,
+  "status": "HOLD_ENTHALPY_PROVENANCE"
+}

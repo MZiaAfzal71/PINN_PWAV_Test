@@ -1,0 +1,77 @@
+{
+  "adaptation_anchors_per_episode": 3,
+  "cold_fraction_of_temperature_span": 0.3,
+  "evaluation": {
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260916,
+    "bootstrap_unit": "atomic source-and-structure component",
+    "failure_policy": "report failures and coverage; primary complete-case score is invalid if a method silently omits any frozen test target",
+    "model_seeds": [
+      17,
+      23,
+      41,
+      59,
+      83
+    ],
+    "primary_contrast": "PINN minus matched multitask without CC residual, with identical independently verified training enthalpy labels",
+    "primary_metric": "macro_temperature_level_balanced_MAE_log10_p",
+    "primary_population": "all eligible test cold episodes at 20000 Pa; no conditioning on enthalpy availability",
+    "report_seed_rule": "average paired differences across all five seeds; do not select a best seed",
+    "secondary_metrics": [
+      "macro_temperature_level_balanced_RMSE_log10_p",
+      "pooled_MAE_log10_p",
+      "largest_component_sensitivity"
+    ],
+    "temperature_levels": "max minus min at most 0.1 K, sorted greedy grouping within one source series",
+    "test_access": "read final cold targets only after architecture, preprocessing, weights, adaptation and stopping rules are selected on training/validation; this is a retrospective pre-model holdout, not a blinded prospective dataset",
+    "test_enthalpy_policy": "all enthalpy labels of validation/test molecules withheld from fitting or adaptation"
+  },
+  "fingerprint": {
+    "bits": 2048,
+    "family": "Morgan",
+    "include_chirality": false,
+    "radius": 2
+  },
+  "freeze_date": "2026-09-16",
+  "minimum_cold_temperature_levels": 2,
+  "minimum_episode_temperature_levels": 6,
+  "minimum_episode_temperature_span_K": 30,
+  "minimum_independent_enthalpy_molecules": 100,
+  "minimum_independent_training_enthalpy_molecules": 100,
+  "pressure_domain_Pa": [
+    1,
+    20000
+  ],
+  "pressure_sensitivity_caps_Pa": [
+    20000,
+    10000,
+    5000
+  ],
+  "rdkit_version": "2025.09.6",
+  "scope": "curation freeze; candidate enthalpies quarantined pending primary methods and independent-lineage review",
+  "seed": 20260916,
+  "source_archive": {
+    "name": "ThermoML.v2020-09-30.tgz",
+    "sha256": "231161b5e443dc1ae0e5da8429d86a88474cb722016e5b790817bb31c58d7ec2",
+    "size_bytes": 189433115
+  },
+  "split_fractions": {
+    "test": 0.15,
+    "train": 0.7,
+    "validation": 0.15
+  },
+  "split_policy": "keep connected components of connectivity, Morgan Tanimoto >=0.7, every eligible pressure DOI, candidate calorimetry reference, and conservative source aliases in one split; size-first deterministic greedy allocation; no model scores or seed search",
+  "split_tie_order": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "tanimoto_threshold": 0.7,
+  "temperature_domain_K": [
+    250,
+    500
+  ],
+  "temperature_level_tolerance_K": 0.1,
+  "version": "0.1.0",
+  "warm_fraction_of_temperature_span": 0.3
+}

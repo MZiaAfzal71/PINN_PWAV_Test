@@ -1,204 +1,304 @@
 {
   "files": {
     "DATA_DICTIONARY.md": {
+      "bytes": 4308,
+      "sha256": "0942f7170976cb05f2ace7e1939c305c122eda6c914573f0871760944084cfa9"
+    },
+    "README.md": {
+      "bytes": 4016,
+      "sha256": "d5a4f1db705dfa0163efb7d88f3dc774baa2e0955ea7958ebe92d545bb7e6eee"
+    },
+    "SOURCE_REVIEW_REPORT.md": {
+      "bytes": 10798,
+      "sha256": "029cb44d1848a9fa2e6c9ba1bccd6826faaa5c177d42c1a0f1c569e864c3c2ec"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "bytes": 1304,
+      "sha256": "020cf1aa6d16a5fdaf526affd71964fb3bea5a9daf6a3d616cd982663747404e"
+    },
+    "baseline_v0_1/DATA_DICTIONARY.md": {
       "bytes": 10108,
       "sha256": "0febe359a439b607339f8b77e74dfb13190a5f2066cace6fd7716247838d6a1b"
     },
-    "EVALUATION_PROTOCOL.md": {
+    "baseline_v0_1/EVALUATION_PROTOCOL.md": {
       "bytes": 12161,
       "sha256": "36b2ff7b4b328694dd4736d6a26aeaff5182b016d8c99023ff29f6e30cb7b2f3"
     },
-    "README.md": {
+    "baseline_v0_1/MANIFEST.json": {
+      "bytes": 7559,
+      "sha256": "b88e1e45b54f6664fb0473e53aa5dc70db350cf0fc0469ebd4e445002a212eeb"
+    },
+    "baseline_v0_1/README.md": {
       "bytes": 6156,
       "sha256": "b070f6b1c85ccf9f381e1af876f5c0f099835d40fa7e5a5b78f0085f0dab788f"
     },
-    "THIRD_PARTY_NOTICES.md": {
+    "baseline_v0_1/THIRD_PARTY_NOTICES.md": {
       "bytes": 1902,
       "sha256": "d6db8b5bae1fabbda7896ea6aa9d172a90a08aa7a3b3bcdbbeb4e822150fdfb9"
     },
-    "VALIDATION_REPORT.md": {
+    "baseline_v0_1/VALIDATION_REPORT.md": {
       "bytes": 12217,
       "sha256": "8400708d277192275407f285ebabebcf4042b4909bcf2207e48caf1d3ca1a37b"
     },
-    "build_freeze.py": {
+    "baseline_v0_1/build_freeze.py": {
       "bytes": 30396,
       "sha256": "90f8699142aa60c268316445935505302ab6556f3cf1f6286d2a6a116ac0fc9a"
     },
-    "check_readiness.py": {
+    "baseline_v0_1/check_readiness.py": {
       "bytes": 2490,
       "sha256": "5e04ab410cf16132797fa6f24d6f0a979ea5fa0762d24778f2eef8acd6c14e95"
     },
-    "config.json": {
+    "baseline_v0_1/config.json": {
       "bytes": 2962,
       "sha256": "2628b24a522a249bb3ad272ae2bfba676782b0b32935b5e85476a8f84313e0b2"
     },
-    "evidence/integrity_verification.json": {
+    "baseline_v0_1/evidence/integrity_verification.json": {
       "bytes": 5505,
       "sha256": "c252b7a5f5c7db81acad15a3f76f3ddee3ff2d7da4e0b5bc0c3d97d5f96a39e3"
     },
-    "evidence/readiness.json": {
+    "baseline_v0_1/evidence/readiness.json": {
       "bytes": 648,
       "sha256": "9a1542db7fc3738d1b16d832e7c3b880f47af46b3e877d93f5082e48c7c0bcdc"
     },
-    "evidence/reproducibility.json": {
+    "baseline_v0_1/evidence/reproducibility.json": {
       "bytes": 5242,
       "sha256": "3de64040c5baeaca65c1190fe5025bd23e7354e5eafc77779f6d28660d468fad"
     },
-    "frozen/enthalpy_candidates.csv": {
+    "baseline_v0_1/frozen/enthalpy_candidates.csv": {
       "bytes": 342326,
       "sha256": "0b6d9b86b5db8d9b8dff32d81286b81b18d5aa83c6f5eb4edf72d87f1948627e"
     },
-    "frozen/enthalpy_decisions.csv": {
+    "baseline_v0_1/frozen/enthalpy_decisions.csv": {
       "bytes": 8127333,
       "sha256": "1754ccd7628d75b8da844c668810193a51c9dc66dc71cc84c4978359656a97c4"
     },
-    "frozen/enthalpy_lineage_links.csv": {
+    "baseline_v0_1/frozen/enthalpy_lineage_links.csv": {
       "bytes": 1951,
       "sha256": "dee4b021f554e53d9d26afedfc061f68f4d7143a2a5ca6eed5b595ab700bb153"
     },
-    "frozen/enthalpy_primary_labels.csv": {
+    "baseline_v0_1/frozen/enthalpy_primary_labels.csv": {
       "bytes": 589,
       "sha256": "54a6de6d5c9c0ade74eb07dd163e170bf47cf2e2253725f882eaeeb376cf8842"
     },
-    "frozen/episode_records.csv": {
+    "baseline_v0_1/frozen/episode_records.csv": {
       "bytes": 1580499,
       "sha256": "6e06d2fe597c3921f19211e49088241bff76288066525551c7ce77863d5659d3"
     },
-    "frozen/episodes.csv": {
+    "baseline_v0_1/frozen/episodes.csv": {
       "bytes": 595746,
       "sha256": "156666d11ca2d8900c26e8a93406c5823fd87ef0053e426222ac48a5da6a0c64"
     },
-    "frozen/group_edges.csv": {
+    "baseline_v0_1/frozen/group_edges.csv": {
       "bytes": 175438,
       "sha256": "780146d11050af4978407d346016b6fcab80b63e4767ef2c62abcc732aacfe1c"
     },
-    "frozen/molecular_review.csv": {
+    "baseline_v0_1/frozen/molecular_review.csv": {
       "bytes": 267457,
       "sha256": "6f9e2dea2cb3a50026d17f095bf50dbd4ef301329be2e7ef622a070a30cacdc2"
     },
-    "frozen/pressure_ceiling_sensitivity.json": {
+    "baseline_v0_1/frozen/pressure_ceiling_sensitivity.json": {
       "bytes": 719,
       "sha256": "655feda356173fa50dab869f855e151c32919a2d7580e9633fdf0a2c763a345b"
     },
-    "frozen/pressure_observations.csv": {
+    "baseline_v0_1/frozen/pressure_observations.csv": {
       "bytes": 8405451,
       "sha256": "d1ed1adaa6ce3417347fc3b7957631dcccdfedc3b6ecc0fbbf01b084db5ef2b4"
     },
-    "frozen/source_aliases_for_grouping.csv": {
+    "baseline_v0_1/frozen/source_aliases_for_grouping.csv": {
       "bytes": 2324,
       "sha256": "602f84e1188cd20c6c09423ad43f2c270caca04963565d71ab0027ff682d0b77"
     },
-    "frozen/source_review_queue.csv": {
+    "baseline_v0_1/frozen/source_review_queue.csv": {
       "bytes": 57069,
       "sha256": "7df382e896d7d40f0761998cce90690b5f60d70c898e645b82d18885371402fe"
     },
-    "frozen/source_series_review.csv": {
+    "baseline_v0_1/frozen/source_series_review.csv": {
       "bytes": 220421,
       "sha256": "c4ab51044426e3e4ed32b4a9bc4bdcf0c1c5202b09910ccaa5af8bafdcb419de"
     },
-    "frozen/split_assignments.csv": {
+    "baseline_v0_1/frozen/split_assignments.csv": {
       "bytes": 244212,
       "sha256": "a30390d2a238876bab474d65d221ae4977f438b06d6dd2abe2038444f6d41374"
     },
-    "frozen/summary.json": {
+    "baseline_v0_1/frozen/summary.json": {
       "bytes": 2689,
       "sha256": "49b3c50fc68aeca2cda18b9b05d7f12c831b169e21901d90569d364a22b1262b"
     },
-    "frozen/test_anchors.csv": {
+    "baseline_v0_1/frozen/test_anchors.csv": {
       "bytes": 144803,
       "sha256": "f9bf04d566ce983bdbbdd38594d296059e3ecc4474079a0ab81163e370e380ba"
     },
-    "frozen/test_cold_targets.csv": {
+    "baseline_v0_1/frozen/test_cold_targets.csv": {
       "bytes": 312127,
       "sha256": "50893818f120c507b2d5fa6a2550203e6e695d483af9a07b48b88d47d5068562"
     },
-    "frozen/train_pressure.csv": {
+    "baseline_v0_1/frozen/train_pressure.csv": {
       "bytes": 5949558,
       "sha256": "161ce729eed6350b9aec8a94c18f0e1afe6eab8ba268efd393c1f2d7fd7bf86e"
     },
-    "frozen/validation_anchors.csv": {
+    "baseline_v0_1/frozen/validation_anchors.csv": {
       "bytes": 125614,
       "sha256": "036727ff9c74a248046fd1d8b47a4a14dfec06223ccb62a774ff9ae71faad6ba"
     },
-    "frozen/validation_cold_targets.csv": {
+    "baseline_v0_1/frozen/validation_cold_targets.csv": {
       "bytes": 235891,
       "sha256": "81c58cfe75f3cdfca5b8375daa59dcb2506e30eebd5050c9fd9c3ed700f6355f"
     },
-    "input_hashes.json": {
+    "baseline_v0_1/input_hashes.json": {
       "bytes": 1076,
       "sha256": "1d96bd7dd1663776f424bedb85a6dfc69cf88107a345fbe3d7bc5732bf382cae"
     },
-    "inputs/ChickosAcreeCompendiumVaporization.csv": {
+    "baseline_v0_1/inputs/ChickosAcreeCompendiumVaporization.csv": {
       "bytes": 3590331,
       "sha256": "bf3d928535baa662849d0ced75acda117134c1cdc421facad2bd0f11b30a99ff"
     },
-    "inputs/archive_xml_verification.json": {
+    "baseline_v0_1/inputs/archive_xml_verification.json": {
       "bytes": 691405,
       "sha256": "6c2876641c484ff6b28ec7745aa46102b088b2d8b25a03863cb1663714020d17"
     },
-    "inputs/citations.json": {
+    "baseline_v0_1/inputs/citations.json": {
       "bytes": 2878869,
       "sha256": "624d9220ac5e36cef0cb22baaa80e964706e833103211bdc0cc64ddb7af385f7"
     },
-    "inputs/enthalpy_records.csv": {
+    "baseline_v0_1/inputs/enthalpy_records.csv": {
       "bytes": 12740422,
       "sha256": "bf9ea6cf43c6ff0228f3f1d3982eef8a479206690fcb6223a89827a2b98f5a36"
     },
-    "inputs/nist_metadata.json": {
+    "baseline_v0_1/inputs/nist_metadata.json": {
       "bytes": 14393,
       "sha256": "400a40833aba7d8de219ca18df1d522458125d6bf15479514603fffe5b778ecf"
     },
-    "inputs/original_RDR_README.md": {
+    "baseline_v0_1/inputs/original_RDR_README.md": {
       "bytes": 2204,
       "sha256": "dfae09723c12e727371801a0a8f8d4760970add39ae5478b1b91f44627c417bc"
     },
-    "inputs/pressure_records.csv": {
+    "baseline_v0_1/inputs/pressure_records.csv": {
       "bytes": 40239957,
       "sha256": "1e17837296e137b8baee7662e1f886aabdff2e533d988ca3163eca8475d23c38"
     },
-    "inputs/rdr_metadata.json": {
+    "baseline_v0_1/inputs/rdr_metadata.json": {
       "bytes": 10399,
       "sha256": "2b38a194f72e80f7d90d0643ef299070a99f19dd19d5a1b3ffba5420e9de3b20"
     },
-    "inputs/source_review_examples.json": {
+    "baseline_v0_1/inputs/source_review_examples.json": {
       "bytes": 3012,
       "sha256": "97f0a30098a6e32f31f5422cda0945ffd2b4249286200f31d860d74b7e716bb3"
     },
-    "inputs/thermoml_enthalpy_records.csv": {
+    "baseline_v0_1/inputs/thermoml_enthalpy_records.csv": {
       "bytes": 628025,
       "sha256": "d1b534a8c7c859b5324ab36b3d11c7b1fb47f96a0ba3d30aafe872f4793be4fa"
     },
-    "inputs/thermoml_provenance.jsonl": {
+    "baseline_v0_1/inputs/thermoml_provenance.jsonl": {
       "bytes": 18544805,
       "sha256": "439cf9077b3bc97c81f34ced5fa9f5a114d1ed327a20c7373984ff3c06bb3461"
     },
-    "requirements.txt": {
+    "baseline_v0_1/requirements.txt": {
       "bytes": 43,
       "sha256": "630cd76ad7d1696469be2b4fcfbbb772ee0700849003b08f76b533d17d4a5a66"
     },
-    "review/label_review_template.csv": {
+    "baseline_v0_1/review/label_review_template.csv": {
       "bytes": 185862,
       "sha256": "b25a13f0a7870f6673e85b17a99f53ea8aa5385ae2147452066e8d42fa530123"
     },
-    "review/prioritized_training_sources.csv": {
+    "baseline_v0_1/review/prioritized_training_sources.csv": {
       "bytes": 11189,
       "sha256": "0c145eaa18e6a1077d86968ffa25a704b0da776693f066a8ee23fd933341728e"
     },
-    "review/source_lookup.csv": {
+    "baseline_v0_1/review/source_lookup.csv": {
       "bytes": 37867,
       "sha256": "73d3a3c8a84e1b2f10c87e0faeea77f19487b80450d6fdf5ce506ef24252b6b5"
     },
-    "verify_freeze.py": {
+    "baseline_v0_1/verify_freeze.py": {
       "bytes": 11397,
       "sha256": "824668ac19021a9d735865613612740b91bef83cb86fefb8323e48bb87adedb4"
     },
-    "verify_source_archive.py": {
+    "baseline_v0_1/verify_source_archive.py": {
       "bytes": 7115,
       "sha256": "01fa123abbeb6730388df11ffbb65bba5ffaa9e51c713c93b1ee957c4867a43f"
+    },
+    "check_readiness.py": {
+      "bytes": 1707,
+      "sha256": "abf0f4b30d361b71dd0e523b7aede76d35ddb8d1ac3b1357844a1fa91e9d56e1"
+    },
+    "config.json": {
+      "bytes": 1227,
+      "sha256": "3ecc4c334f9edf9340511528bf3830039242a99fbe10c19591b14b613a0258c7"
+    },
+    "evidence/identity_verification.csv": {
+      "bytes": 5532,
+      "sha256": "79998d6c1fc63507b8a47c664de85b3cbe50c68451a6635698a975b5db95cfb6"
+    },
+    "evidence/primary_document_register.json": {
+      "bytes": 3309,
+      "sha256": "1b709609f1d36f214c55c3dedf1fa2be5112531b723a02a1e63e71b7248d6e11"
+    },
+    "evidence/reproducibility.json": {
+      "bytes": 1511,
+      "sha256": "25796fedb1803b26451753dc55fab67a80567d86e24691222ac55c02a5266b66"
+    },
+    "evidence/source_overlap_check.csv": {
+      "bytes": 1182,
+      "sha256": "642168666a0249de7805e2abdeaa852330560adc98b30977658670fce9bdc088"
+    },
+    "evidence/validation.json": {
+      "bytes": 370,
+      "sha256": "963abb37be487f7c1a85bb8e8ee27d8d205b3e821a4eb5b46dc104b4d4e9f6bb"
+    },
+    "fetch_primary_sources.py": {
+      "bytes": 1153,
+      "sha256": "8af387514f167a73f2a11080279f4c5145b3040b3f6d1a8466d0235ce1c87973"
+    },
+    "frozen/enthalpy_candidates_reviewed.csv": {
+      "bytes": 448434,
+      "sha256": "9d1e4105d9d282d488a805823da3d07f777acfe0878d23161fc35d5cb6dd9b14"
+    },
+    "frozen/enthalpy_primary_labels.csv": {
+      "bytes": 41802,
+      "sha256": "b5e89db265f1ac8fb5e8c30db54f2c5c57b2caa2165edc6f7b6b873b211385b3"
+    },
+    "frozen/summary.json": {
+      "bytes": 1720,
+      "sha256": "8149663e74912679ce0e094be96202b6adc4490eebc09f8b11d7ab36f0eec1b5"
+    },
+    "frozen/training_enthalpy_molecules.csv": {
+      "bytes": 5024,
+      "sha256": "bd64a459067f3a50cbccd4e393435cf6e44b163826dd2bda7be4530e5a91be15"
+    },
+    "rebuild_review.py": {
+      "bytes": 12440,
+      "sha256": "250c4b203961b684d0c9854cadb05494557b8b11aa0674f41b1d0e597b818554"
+    },
+    "review/measurement_lineages.csv": {
+      "bytes": 6297,
+      "sha256": "73e08da7b7a7afa0e52e091a0bc70e808ae18804b646d2ed5c9f9e3b24e6b181"
+    },
+    "review/numeric_changes.csv": {
+      "bytes": 10277,
+      "sha256": "2259862219af0c279959ba1e436b70aba7afaf3ce7a52eff0c16fcac6dd7f677"
+    },
+    "review/primary_table_transcriptions.csv": {
+      "bytes": 9705,
+      "sha256": "1a0ecf2cd0ebcd40496847f0afb3f06362c67b1d81d33302468ffde029c7dfbf"
+    },
+    "review/priority_14_row_decisions.csv": {
+      "bytes": 130115,
+      "sha256": "8dde9e3e6bf0d8c5feeeec209d61d136ef996e65ce1efb37a7fa663f68d1e734"
+    },
+    "review/priority_source_results.csv": {
+      "bytes": 1974,
+      "sha256": "27b3d94755996e40ee0d682cfaaa60b44b0adc0abc2ae78d6a5d602a3c646d15"
+    },
+    "review/source_register.csv": {
+      "bytes": 10304,
+      "sha256": "00323dea354b6071dea2cc0da742168a714e211173c968ef54406d6da0aac974"
+    },
+    "verify_review.py": {
+      "bytes": 7507,
+      "sha256": "5fc533ed769496f5c3d577d8bb2ae11cb9817eeb2a5f5ad94e4c41ef2964cc76"
     }
   },
-  "freeze_date": "2026-09-16",
-  "manifest_convention": "SHA256 for every packaged file except MANIFEST.json; release ID hashes the canonical sorted files object",
-  "release_id": "enthalpy-freeze-v0.1.0-be4c7b5612677258",
-  "version": "0.1.0"
+  "release_id": "enthalpy-source-review-v0.2.0-cf8fa3b5adff7c3f",
+  "review_date": "2026-09-17",
+  "scientific_readiness": "HOLD_ENTHALPY_PROVENANCE",
+  "version": "0.2.0"
 }

@@ -1,13 +1,9 @@
-# Data attribution and license notice
+# Sources and attribution
 
-The ThermoML observations are derived from the user's supplied NIST ThermoML archive. Source journal DOIs, original numerical metadata and NIST dataset metadata are retained. NIST's dataset metadata links to https://www.nist.gov/open/license .
+The entire original v0.1 release and its notices are retained under `baseline_v0_1/`. Its ThermoML and digitized compendium attribution and licensing statements continue to apply. Cite the original experimental articles as well as NIST ThermoML and the Acree/Chickos compendium and its digitization when reporting results.
 
-The included `ChickosAcreeCompendiumVaporization.csv` is file 250199 of KU Leuven RDR dataset DOI 10.48804/CBHEAB, *Replication Data for: Thermodynamics-informed Graph Neural Networks for Phase Transition Enthalpies*, by Roel Leenhouts, Sebastien Jankelevitch, Roel Raike, Simon Müller, and Florence Vermeire. Dataset version 2 metadata specifies the MIT license. The original README, metadata, and underlying Acree–Chickos compendium citations are included unchanged. Original data and authorship are not claimed by the audit.
+Original Acta Chemica Scandinavica papers were accessed through the official archive at <https://actachemscand.ki.ku.dk/>. Numeric facts, bibliographic details, source locators, document hashes and independently written review notes are provided here; publisher PDFs and OCR reproductions are not redistributed. Access to a downloadable original does not by itself grant permission to redistribute it.
 
-MIT permission text referenced by the source dataset:
+Bibliographic leads were checked using Crossref, NIST WebBook and publisher metadata. Such leads are explicitly separated from original methods/table verification. Complete URLs and source status are in `review/source_register.csv` and `evidence/primary_document_register.json`.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Review notes and scripts were generated with AI assistance. No independent human review or experimental replication is represented. Exact original-table provenance permits subsequent inspection and correction in a new version; do not overwrite frozen versions silently.

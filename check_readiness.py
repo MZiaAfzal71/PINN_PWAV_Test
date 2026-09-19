@@ -1,46 +1,21 @@
 #!/usr/bin/env python3
-"""Scientific release gate. Exit 2 is the expected HOLD for v0.1.0.
-
-This release freezes quarantined candidates, not certified training enthalpies.
-Do not change a decision field in-place to bypass provenance requirements.
-A reviewed successor version must retain evidence and repeat integrity checks.
-"""
-import csv
-import hashlib
-import json
+"""Exit 2 means the retained scientific feasibility gate is not yet satisfied."""
 from pathlib import Path
-import sys
+import csv, hashlib, json, sys
 ROOT=Path(__file__).resolve().parent
-
-def sha(p):
-    h=hashlib.sha256()
-    with open(p,'rb') as f:
-        for b in iter(lambda:f.read(8*1024*1024),b''):h.update(b)
-    return h.hexdigest()
-
 def main():
-    config=json.loads((ROOT/'config.json').read_text())
-    manifest=ROOT/'MANIFEST.json'
-    if manifest.exists():
-        data=json.loads(manifest.read_text())
-        for name,expected in data['files'].items():
-            if sha(ROOT/name)!=expected['sha256']:
-                raise SystemExit('Integrity failure; a frozen file changed: '+name)
-    with (ROOT/'frozen/enthalpy_primary_labels.csv').open() as f:labels=list(csv.DictReader(f))
-    required=['raw_row_verified','full_primary_methods_verified','independent_of_pressure_verified','training_allowed']
-    certified=[r for r in labels if all(r.get(k)=='True' for k in required)]
-    molecules={r['molecule_id'] for r in certified}
-    train={r['molecule_id'] for r in certified if r['split']=='train'}
-    enough=(len(molecules)>=config['minimum_independent_enthalpy_molecules'] and
-            len(train)>=config['minimum_independent_training_enthalpy_molecules'])
-    status='READY' if enough and len(certified)==len(labels) else 'HOLD_ENTHALPY_PROVENANCE'
-    result=dict(status=status,certified_independent_enthalpy_molecules=len(molecules),
-        certified_independent_training_enthalpy_molecules=len(train),
-        required_total=config['minimum_independent_enthalpy_molecules'],
-        required_train=config['minimum_independent_training_enthalpy_molecules'],
-        reason='Primary methods, measurement/reference temperature, phase/state, uncertainty convention and pressure-independent correction lineage must be documented per label.',
-        next_action='Resolve the source review queue and create a reviewed successor release. Retain current split IDs; if newly discovered lineage bridges splits, embargo affected records or explicitly version the split change before training.')
-    print(json.dumps(result,indent=2))
-    return 0 if status=='READY' else 2
-
+    manifest=json.loads((ROOT/'MANIFEST.json').read_text())
+    for path,x in manifest['files'].items():
+        if hashlib.sha256((ROOT/path).read_bytes()).hexdigest()!=x['sha256']:
+            raise SystemExit('Release integrity failure: '+path)
+    with (ROOT/'frozen/enthalpy_primary_labels.csv').open() as f: rows=list(csv.DictReader(f))
+    required=('raw_row_verified','primary_identity_verified','primary_numeric_table_verified','full_primary_methods_verified','independent_of_pressure_verified','training_allowed')
+    approved=[r for r in rows if all(r.get(k)=='True' for k in required) and r['decision']=='approve_primary_calorimetry' and r['split']=='train']
+    config=json.loads((ROOT/'config.json').read_text());n=len({r['molecule_id'] for r in approved})
+    ready=(len(approved)==len(rows) and n>=config['minimum_independent_training_enthalpy_molecules'] and n>=config['minimum_independent_enthalpy_molecules'])
+    result=dict(status='READY' if ready else 'HOLD_ENTHALPY_PROVENANCE',approved_labels=len(approved),
+      approved_training_molecules=n,required_training_molecules=config['minimum_independent_training_enthalpy_molecules'],
+      additional_training_molecules_needed=max(0,config['minimum_independent_training_enthalpy_molecules']-n),
+      reason='The 100-training-molecule project feasibility gate is unchanged; source access and lineage remain incomplete.')
+    print(json.dumps(result,indent=2));return 0 if ready else 2
 if __name__=='__main__':sys.exit(main())

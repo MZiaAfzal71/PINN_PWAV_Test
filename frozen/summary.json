@@ -1,82 +1,50 @@
 {
-  "CC_diagnostic_used_for_exclusion": false,
-  "atomic_components": 122,
-  "candidate_enthalpy_decisions": {
+  "additional_training_molecules_needed": 64,
+  "approved_atomic_components": 1,
+  "approved_distinct_temperatures_K": [
+    "298.15"
+  ],
+  "approved_labels": 37,
+  "approved_laboratories": 1,
+  "approved_rows_inside_pressure_temperature_envelope": 23,
+  "approved_test_labels": 0,
+  "approved_training_molecules": 36,
+  "approved_validation_labels": 0,
+  "baseline_unchanged": true,
+  "cold_episode_counts": {
+    "test": 78,
+    "train": 292,
+    "validation": 66
+  },
+  "decision_counts": {
+    "approve_primary_calorimetry": 37,
+    "hold_abstract_only": 8,
+    "hold_ambiguous_reference_code": 21,
+    "hold_full_text_not_obtained": 102,
+    "hold_reference_assignment_unresolved": 4,
+    "hold_secondary_temperature_corrected_value": 1,
+    "hold_source_reported_conflict": 1,
     "quarantine_archive_calorimetry": 13,
-    "quarantine_compendium_provenance": 736,
+    "quarantine_compendium_provenance": 562,
     "quarantine_same_source_conflict": 2
   },
-  "certified_independent_enthalpy_labels": 0,
-  "certified_independent_enthalpy_molecules": 0,
-  "certified_independent_training_enthalpy_molecules": 0,
-  "compendium_C_candidate_molecules_in_frozen_scope": 194,
-  "compendium_C_candidates_in_frozen_scope": 736,
-  "date": "2026-09-16",
-  "duplicate_pressure_copies_removed_from_use": 231,
-  "full_primary_methods_obtained": false,
-  "input_hashes_verified": 11,
-  "known_cross_dataset_lineage_links": 7,
-  "largest_component_molecules": 423,
-  "pressure_candidate_molecules": 860,
-  "pressure_rows_after_dedup": 13500,
-  "pressure_rows_before_dedup": 13731,
-  "primary_metric": "macro_temperature_level_balanced_MAE_log10_p",
-  "raw_compendium_checks": {
-    "compendium_original_mismatches": 0,
-    "compendium_original_rows_checked": 16727
+  "direct_measurement_table_rows_verified": 38,
+  "full_measurement_papers_verified": 4,
+  "model_fits_performed": false,
+  "note": "37 labels represent 36 molecular identities, not 37 independent laboratories or source components. Verified provenance does not establish universal accuracy or ideal-vapor validity.",
+  "primary_coverage_required_training_molecules": 100,
+  "primary_test_target_rows": 512,
+  "priority_candidate_molecules": 100,
+  "priority_candidate_rows": 174,
+  "priority_codes_reviewed_for_access_and_identity": 14,
+  "referenced_apparatus_papers_verified": 2,
+  "remaining_quarantined_candidates": 714,
+  "review_date": "2026-09-17",
+  "split_counts": {
+    "test": 105,
+    "train": 492,
+    "validation": 106
   },
-  "required_independent_enthalpy_molecules_before_main_training": 100,
-  "required_independent_training_enthalpy_molecules": 100,
-  "scientific_readiness": "HOLD_ENTHALPY_PROVENANCE",
-  "software": {
-    "numpy": "2.3.5",
-    "pandas": "2.2.3",
-    "python": "3.12.14",
-    "rdkit": "2025.09.6"
-  },
-  "source_review_groups": 194,
-  "split_counts": [
-    {
-      "adaptation_anchor_rows": 0,
-      "calorimetry_candidate_molecules": 168,
-      "cold_episodes": 292,
-      "cold_target_rows": 0,
-      "components": 39,
-      "exposed_pressure_training_rows": 9776,
-      "molecules": 492,
-      "pressure_rows_deduplicated": 9776,
-      "split": "train"
-    },
-    {
-      "adaptation_anchor_rows": 198,
-      "calorimetry_candidate_molecules": 16,
-      "cold_episodes": 66,
-      "cold_target_rows": 376,
-      "components": 41,
-      "exposed_pressure_training_rows": 0,
-      "molecules": 106,
-      "pressure_rows_deduplicated": 1706,
-      "split": "validation"
-    },
-    {
-      "adaptation_anchor_rows": 234,
-      "calorimetry_candidate_molecules": 10,
-      "cold_episodes": 78,
-      "cold_target_rows": 512,
-      "components": 42,
-      "exposed_pressure_training_rows": 0,
-      "molecules": 105,
-      "pressure_rows_deduplicated": 2018,
-      "split": "test"
-    }
-  ],
-  "split_selection_used_model_scores": false,
-  "structure_eligible_molecules": 703,
-  "structure_exclusion_reasons": {
-    "carboxylic_acid_association_review": 35,
-    "unspecified_stereochemistry": 122
-  },
-  "test_design": "retrospective pre-model holdout; no models trained",
-  "thermoml_calorimetry_candidates_in_frozen_scope": 15,
-  "version": "0.1.0"
+  "status": "HOLD_ENTHALPY_PROVENANCE",
+  "version": "0.2.0"
 }
