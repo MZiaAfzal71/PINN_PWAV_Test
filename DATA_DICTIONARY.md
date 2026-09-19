@@ -1,62 +1,106 @@
-# Fields in the v0.3 enthalpy review
+# Data dictionary
 
-Original identities and candidate metadata follow `baseline_v0_1/DATA_DICTIONARY.md`. CSV booleans serialize as `True`/`False`; empty cells mean unknown/not applicable, never zero. Record IDs are stable source identifiers. Use a CSV parser, not comma splitting, because names, InChIs and JSON cells may contain commas.
+CSV files use UTF-8, comma delimiters, one header row, `.` as the decimal mark, and explicit `True`/`False` strings for Boolean fields. Energies labeled `int_J_g` are US international joules per gram as printed in the 1947 paper. Fields labeled `abs_kJ_mol` apply the recorded 1.000165 conversion and the explicit molar mass.
+
+## `frozen/enthalpy_primary_labels.csv`
+
+The strict direct-enthalpy export. It is byte-identical to v0.3 and contains 42 observations on 41 training molecules. These are the only current labels allowed in the primary direct-H loss. Its inherited columns are documented in `previous_v0_3/DATA_DICTIONARY.md`.
+
+## `frozen/enthalpy_candidates_reviewed.csv`
+
+All 751 frozen candidate rows and their current decision. Identity, molecule, component, and split fields are unchanged from v0.3.
+
+| New field | Meaning |
+|---|---|
+| `v0_4_tier` | `strict_primary_label`, `sensitivity_L_plus_gamma_physics_constraint`, or inherited hold/quarantine. |
+| `v0_4_gamma_constraint_ready` | Whether a separate raw-gamma constraint is complete. This never means the row is a direct H label. |
+| `v0_4_beta_reconstruction_status` | Compound-level outcome of the archival beta audit. |
+| `v0_4_review_note` | Short statement of the v0.4 action. |
+
+For the 14 NIST rows, `training_allowed=False` and `independent_of_pressure_verified=False` remain mandatory.
+
+## `frozen/enthalpy_nist_sensitivity_labels.csv`
+
+The 14 published `L = gamma - beta` values, isolated from the primary pool.
 
 | Field | Meaning |
 |---|---|
-| `original_H_kJ_mol`, `original_T_K`, `original_reported_deviation`, `original_decision` | Unmodified v0.1 values retained for audit. |
-| `primary_H`, `primary_deviation`, `primary_unit` | Original printed measurement and deviation, before conversion. |
-| `unit_multiplier_to_kJ` | 4.1840 for defined kcal/mol; 1 for kJ/mol; for NIST specific energies, 1.000165 × molar_mass_g_mol / 1000. The transcription input marks this as computed; the reviewed export stores the numeric multiplier. |
-| `H_kJ_mol`, `H_J_mol`, `T_K` | Current curated numeric label and actual measurement temperature on approved rows. NIST held rows also contain normalized primary values; other unresolved rows retain original candidate values. Eligibility is a separate field. |
-| `primary_page`, `primary_table`, `primary_compound_name` | Location and chemical name/formula in the original table. |
-| `structure_smiles_from_primary_name` | Explicitly reviewed chemical-name/formula interpretation; converted to full InChI and checked against the frozen identity. |
-| `primary_identity_verified` | Name/formula interpretation gives an exact full-InChI match. Does not assert identity of physical samples across different experiments. |
-| `primary_numeric_table_verified`, `table_image_visually_checked` | Numeric entries checked against the original table image. |
-| `full_primary_methods_verified` | Measurement paper and applicable original apparatus description were reviewed. |
-| `primary_document_sha256`, `primary_source_url` | Exact reviewed document receipt and public source link. |
-| `thermodynamic_state` | Approved rows: liquid-to-real-vapor saturation enthalpy; no ideal-gas conversion. |
-| `uncertainty_kind` | Either estimated total including systematics with unknown coverage, or twice the standard error of the mean for random error only. |
-| `reported_deviation` | Quoted deviation converted to kJ/mol on reviewed direct rows; not automatically one sigma. |
-| `random_standard_error_kJ_mol` | Quoted deviation / 2 only where the original source explicitly states twice-standard-error. |
-| `standard_error_multiplier` | 2 for those random-error entries; separate from a confidence coverage factor. |
-| `systematic_error_bound_kJ_mol` | 0.08 for the 1968 source; no assumed probability distribution. Missing in another paper does not mean zero systematic error. |
-| `uncertainty_confidence_percent`, `uncertainty_coverage_factor` | Blank for all approved rows: not supplied by these sources as modern expanded uncertainty metadata. |
-| `ancillary_apparatus_pressure_used` | Pressure affects operation or small apparatus/mass corrections; this differs from deriving H from a vapor-pressure curve. |
-| `pressure_curve_used_to_derive_label`, `benchmark_pressure_used_for_label` | False for approved labels after original-method and correction-lineage review. |
-| `independent_of_pressure_verified` | Operational measurement independence defined in `config.json`; not statistical independence of laboratory errors. |
-| `measurement_lineage_id` | Source and experiment lineage; distinct measurements can share the same molecule. |
-| `minimum_replicates_in_reported_mean` | Source-reported minimum; five was retained from v0.2. New Lund rows also have exact replicate counts; NIST rows have 2–4, as transcribed. |
-| `training_allowed` | Label-level eligibility for future training. The project-level readiness gate is separate and still HOLD. |
-| `quality_flags` | Retained impurity, water, phase-stability or source-conflict limitations. |
-| `inside_pressure_temperature_envelope` | Coverage check against retained same-molecule pressure temperatures; no pressure slope fitted. |
-| `review_wave`, `source_review_status` | Distinguish original wave1 rows, new wave2 transcriptions, access review and unreviewed candidates. |
+| `published_gamma_int_J_g` | Mean measured energy per withdrawn mass. |
+| `published_beta_int_J_g` | Source-applied pressure-slope correction. |
+| `published_L_int_J_g` | Printed latent heat after subtraction. |
+| `published_L_abs_kJ_mol` | Recorded molar conversion of printed L. |
+| `beta_reconstruction_status` | Whether accessible inputs reproduce beta at 0.01 J/g and whether the exact source lineage is complete. |
+| `archival_lineage_complete` | True only when the chosen slope and volume sources belong to the exact source pair cited for the correction. |
+| `label_tier` | Always `sensitivity_only_published_L`. |
+| `use_for_primary_training` | Always false. |
+| `use_for_validation`, `use_for_test` | Always false. |
+| `use_for_sensitivity_analysis` | Always true; use all 14 as one prespecified tier. |
+| `do_not_mix_with_primary_labels` | Always true. |
 
-`approve_primary_calorimetry` is the only approved decision. All `hold_*` and `quarantine_*` rows remain excluded from fitting. A verified direct table row can still be held, as for the source-conflicted ethylenediamine value.
+## `frozen/enthalpy_nist_gamma_constraints.csv`
 
-`source_register.csv` DOI arrays for unresolved references are bibliography leads, not approved data lineage. In particular, the two 1985 paper candidates must not both be attached to every row.
+Fourteen raw calorimetric constraints for a future coupled pressure-enthalpy PINN.
 
-
-## Additional distinctions introduced in v0.3
-
-| Field / file | Meaning |
+| Field | Unit or meaning |
 |---|---|
-| `previous_v0_2_decision` | Historical decision before this follow-up. |
-| `overall_uncertainty_relation`, `overall_uncertainty_value_kJ_mol` | Printed overall-error statement: 1971 `<= 0.1`; 1970 `>= 0.2`. No reversal, Gaussian model or upper bound inferred for the latter. |
-| `reported_replicates_exact` | Actual number of determinations in a new source table, not molecular sample size. |
-| `moisture_treatment` | Whether water uptake was corrected, negligible as reported, known but uncorrected, or a source-wide caution. |
-| `ancillary_reference_notes` | Unresolved pagination, reference-constant or upstream source limitations. |
-| `source_temperature_adjustment` | Source's within-experiment temperature treatment, distinct from any adjustment performed in this release. |
-| `temperature_correction_applied` | No additional enthalpy correction was applied by this curation. It does not mean the original authors made no run-temperature corrections. |
-| `temperature_scale_note` | Retains historical scale caveats, especially NIST's International Temperature Scale. |
-| `mean_gamma_intJ_g`, `beta_intJ_g`, `primary_H` on NIST rows | Printed energy per withdrawn mass, correction, and specific latent heat; L=gamma−beta. |
-| `energy_conversion_factor_to_abs_J` | 1.000165 for US international J, from NBS Circular 475 p.22. It is not the defined-calorie conversion. |
-| `molar_mass_g_mol` | Conventional natural-isotopic-average RDKit MolWt, rounded to 0.001 g/mol and made explicit for NIST normalization. |
-| `estimated_relative_error_fraction` | NIST authors' 0.001 relative-error estimate, with no confidence convention. |
-| `author_estimated_total_error_kJ_mol` | NIST estimate × normalized H; separate from a reported statistical deviation. |
-| `pressure_slope_ancillary_correction` | True for NIST beta; false for eligible labels. |
-| `pressure_curve_used_to_derive_label` | True for NIST because a curve derivative contributes to the correction; this does not mean the whole measurement is a pressure-derived pseudo-label. |
-| `benchmark_pressure_used_for_label` | False for eligible labels; `unknown_upstream_ancillary_lineage` for NIST. No benchmark pressures were used by this curation. |
-| `source_role` | Distinguishes reported primary calorimetry, possible historical reuse, and NIST calorimetry with a derivative correction. |
-| `unresolved_lineage_leads.csv` | Comparison values only, all ineligible. Numerical resemblance does not establish a source-code mapping. |
+| `gamma_int_J_g` | Printed US international J/g. |
+| `gamma_abs_kJ_mol` | Converted absolute kJ/mol. |
+| `T_K_model_coordinate` | 298.15 K, retained for compatibility with the frozen model coordinates. |
+| `T_K_historical_absolute_for_source_arithmetic` | 298.160 K, the archived absolute-temperature convention. |
+| `molar_volume_25C_mL_mol` | Traced liquid molar volume used by the constraint. |
+| `molar_volume_25C_m3_mol` | Same volume in SI. |
+| `constraint_equation` | Molar raw-observable balance. |
+| `pressure_derivative_definition` | Stable form for a log-pressure model. |
+| `constraint_ready` | Required fields and volume provenance are present. |
+| `direct_enthalpy_label`, `primary_training_label`, `evaluation_label` | Always false. |
+| `held_out_pressure_targets_permitted` | Always false. |
+| `training_visible_pressure_or_model_derivative_only` | Always true. |
+| `uncertainty_status` | Prevents invented rowwise sigma or inverse-variance weighting. |
 
-Blank cells are missing/not applicable, never a measured zero. The NIST `primary_deviation` and `reported_deviation` stay blank because the source gives an overall relative accuracy estimate rather than a printed row-level deviation. Extra digits in exact arithmetic are not claims of experimental precision. All 14 NIST rows remain excluded under `hold_ancillary_pressure_slope_lineage`.
+## `review/nist_ancillary_inputs.csv`
+
+Versioned manual transcriptions used by `rebuild_review.py`.
+
+| Field | Meaning |
+|---|---|
+| `molar_volume_25C_mL_mol` | Printed API molar volume; blank for n-decane because its volume is derived from density. |
+| `volume_source_key`, `volume_source_locator` | Document key and exact table/page location. |
+| `vapor_pressure_source_key`, `vapor_pressure_source_locator` | Document key and exact Antoine-table location. |
+| `antoine_A`, `antoine_B`, `antoine_C_C` | Constants in `log10(p_mmHg)=A-B/(C+t_C)`. |
+| `vapor_pressure_source_directly_in_cited_beta_pair` | False for the two accessible surrogate correlations. |
+| `density_d0_g_mL`, `density_alpha`, `density_beta`, `density_gamma`, `density_t0_C` | ICT density-equation inputs for n-decane. |
+
+## `evidence/nist_ancillary_reconstruction.csv`
+
+The complete compound-level arithmetic receipt.
+
+| Field | Meaning |
+|---|---|
+| `p_sat_25C_mmHg` | Pressure calculated from the archived Antoine equation. |
+| `dp_sat_dT_25C_mmHg_K` | Analytic derivative at 25 °C. |
+| `specific_volume_25C_cm3_g` | Liquid specific volume used in beta. |
+| `reconstructed_beta_int_J_g` | `T v dp/dT`, in international-J/g-compatible source units. |
+| `signed_difference_reconstructed_minus_published_int_J_g` | Unrounded signed discrepancy. |
+| `nearest_0.01_half_up_int_J_g` | Primary printed-precision comparison. |
+| `nearest_0.01_matches_published` | Frozen match decision. |
+| `within_unrounded_half_cent` | Independent tolerance receipt. |
+| `truncated_0.01_int_J_g`, `truncation_matches_published` | Diagnostic only; not the primary rule. |
+| `reconstruction_status` | Combines numerical agreement and exact/surrogate lineage. |
+
+## `evidence/nist_pressure_lineage_overlap.csv`
+
+One row per NIST molecule. Counts and temperature ranges are computed from the deduplicated frozen pressure table. DOI overlap fields compare the archival documents with the frozen pressure sources. A false overlap flag is a leakage receipt, not proof of thermodynamic independence.
+
+## JSON evidence
+
+- `archival_document_register.json`: title, year, role, URLs, SHA256, and locators for each checked document. PDFs are not bundled.
+- `modeling_contract.json`: machine-readable constraint equation and leakage rules.
+- `sensitivity_policy.json`: primary, sensitivity, and gamma-tier use restrictions.
+- `parent_release_receipt.json`: v0.3 hashes and verification result.
+- `access_followup.json`: current full-text status for Månsson et al. (1977).
+- `validation.json`: software verification result.
+- `reproducibility.json`: byte-identical rebuild receipt.
+
+## Historical files
+
+`previous_v0_3/` is an immutable copy of the complete parent release. The pressure observations, split assignments, episodes, anchors, and cold targets used here are under `previous_v0_3/baseline_v0_1/frozen/`.

@@ -1,0 +1,14 @@
+{
+  "baseline_manifest_sha256": "b88e1e45b54f6664fb0473e53aa5dc70db350cf0fc0469ebd4e445002a212eeb",
+  "human_review_status": "AI-assisted document and table review; no independent human sign-off",
+  "minimum_independent_enthalpy_molecules": 100,
+  "minimum_independent_training_enthalpy_molecules": 100,
+  "model_fits_performed": false,
+  "parent_release_id": "enthalpy-freeze-v0.1.0-be4c7b5612677258",
+  "pressure_independence_definition": "Not inferred from a pressure-temperature slope/correlation or corrected using benchmark pressure labels. Ancillary apparatus pressure, gas-density corrections and reference checks are disclosed; statistical independence of all laboratory systematics is not claimed.",
+  "primary_label_policy": "Verified current-work calorimetry with resolved identity, original table, methods, T, saturation state, uncertainty convention and independent measurement/correction lineage; source-explicit unresolved measurement conflicts held.",
+  "review_date": "2026-09-17",
+  "review_scope": "First 14 priority reference codes; 174 candidates on 100 training molecules; four measurement papers and two method papers obtained.",
+  "test_targets_used_for_label_decisions": false,
+  "version": "0.2.0"
+}

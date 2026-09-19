@@ -1,0 +1,25 @@
+{
+  "command": "python rebuild_review.py",
+  "files_sha256": {
+    "evidence/identity_verification.csv": "746ed2152897838369af93604311f7c2c4fe0550abbedd6c2593f97a66b82abb",
+    "evidence/nist_conversion_checks.csv": "08820f0752eb92e71da0911d6699bac2df991eee66c11c1b471a9cc7368a548e",
+    "evidence/source_overlap_check.csv": "1475a1e7332d6f628331c770f949435db2fad3f3ea54b74aaac0b3dad00a838c",
+    "evidence/water_correction_checks.csv": "9cd84096250fcab2ac73a32604be565438f329cd880077aed778fecb3b8aaf71",
+    "evidence/water_correction_summary.json": "2da6bdb13f45dda315b977765cfa110c7aee9895515c33be2c9d3c0eb1daa13f",
+    "frozen/enthalpy_candidates_reviewed.csv": "3d07b72b648d856c50f9af6d316c552b976bcf8ec0eb186cc68828ed4f5b42a8",
+    "frozen/enthalpy_nist_ancillary_hold.csv": "3a2d8808e3fff4d4ffe4f94a08be9d42c35a898c2b4730b05839cc3373f39fbf",
+    "frozen/enthalpy_primary_labels.csv": "ed21842873d54be576edf6d14732f657eb8ca7e7def26739a9cb90df01d32045",
+    "frozen/summary.json": "df4027ee48d177df3c2ae81b706025830186ccc8cd5d98301f3dffec5a3c4f35",
+    "frozen/training_enthalpy_molecules.csv": "cc2f0c1a6a7dd4908f0c89c1f431456c39f933e9be34b14b916a7bb92dc9bc44",
+    "review/all_reviewed_source_rows.csv": "9d4cf405aad6a26070d0a31483202f020c2448631f872e4ce5f119bfd22f3282",
+    "review/measurement_lineages.csv": "5046570cc41f743b908c2eb16d8bb74a7d31756fa0fd6dfdf01ec890b58d34db",
+    "review/numeric_changes.csv": "430f6262797456a862a910940086fc2460cfefd11af941a52ad68a4e41d20396",
+    "review/priority_14_row_decisions.csv": "c6da16c16f6d0add1f026717545bd7d17ac8e75d23d601f1a16289c12a9cf0aa",
+    "review/priority_source_results.csv": "8d721e7de5f6838b7420f6cee2c4cff2b83e6e15bdc4a2d683a79501c4105699",
+    "review/remaining_verification_queue.csv": "d3f7fa3a8e67f2f2f150fd76e64164d9740761be62a9730852075d976824eabf"
+  },
+  "outputs_byte_identical": 16,
+  "rdkit_version": "2025.09.6",
+  "scope": "Deterministic regeneration from fixed review inputs; not independent scientific replication.",
+  "status": "PASS"
+}

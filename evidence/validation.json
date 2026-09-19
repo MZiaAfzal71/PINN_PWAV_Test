@@ -1,9 +1,12 @@
 {
   "additional_training_molecules_needed": 59,
-  "approved_labels": 42,
-  "approved_training_molecules": 41,
-  "checks_passed": 2273,
+  "checks_passed": 2063,
+  "nist_beta_matches": 7,
+  "nist_beta_mismatches": 7,
+  "nist_gamma_constraints": 14,
   "scientific_readiness": "HOLD_ENTHALPY_PROVENANCE",
-  "scope": "Integrity, mapping and arithmetic checks. Scientific decisions are evidenced manual/AI-assisted inputs, not established by these software checks.",
-  "status": "PASS"
+  "scope": "Integrity, exact mappings, archival-input arithmetic, tier separation, and split/leakage checks; not independent experimental replication.",
+  "status": "PASS",
+  "strict_primary_labels": 42,
+  "strict_primary_training_molecules": 41
 }

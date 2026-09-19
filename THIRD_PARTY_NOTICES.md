@@ -1,14 +1,25 @@
-# Sources and attribution
+# Third-party sources and notices
 
-The entire original v0.1 release and its notices are retained under `baseline_v0_1/`. Its ThermoML and digitized compendium attribution and licensing statements continue to apply. Cite the original experimental articles as well as NIST ThermoML and the Acree/Chickos compendium and its digitization when reporting results.
+This release contains transcribed numerical facts, provenance metadata, hashes, and original analysis. It does not redistribute the reviewed source PDFs.
 
-Original Acta Chemica Scandinavica papers were accessed through the official archive at <https://actachemscand.ki.ku.dk/>. Numeric facts, bibliographic details, source locators, document hashes and independently written review notes are provided here; publisher PDFs and OCR reproductions are not redistributed. Access to a downloadable original does not by itself grant permission to redistribute it.
+## Osborne and Ginnings, 1947
 
-Bibliographic leads were checked using Crossref, NIST WebBook and publisher metadata. Such leads are explicitly separated from original methods/table verification. Complete URLs and source status are in `review/source_register.csv` and `evidence/primary_document_register.json`.
+N. S. Osborne and D. C. Ginnings, “Measurements of heat of vaporization and heat capacity of a number of hydrocarbons,” *Journal of Research of the National Bureau of Standards* 39, 453–477 (1947), DOI 10.6028/JRES.039.031. Official NIST access and exact file hash are recorded in `evidence/archival_document_register.json`.
 
-Review notes and scripts were generated with AI assistance. No independent human review or experimental replication is represented. Exact original-table provenance permits subsequent inspection and correction in a new version; do not overwrite frozen versions silently.
+## NBS Circular 461
 
+F. D. Rossini et al., *Selected Values of Properties of Hydrocarbons*, NBS Circular 461 (1947), DOI 10.6028/NBS.CIRC.461. Used for API Research Project 44 molecular-volume and Antoine tables and the archived temperature convention.
 
-## v0.3 source additions
+## Willingham et al., 1945
 
-Kusano and Wadsö, Acta Chem. Scand. 24 (1970) 2037–2042 and 25 (1971) 219–224; Sellers and Sunner, Acta Chem. Scand. 16 (1962) 46–52; Osborne and Ginnings, J. Res. NBS39 (1947) 453–477. Original source URLs, numerical facts, page locators and document hashes are recorded. Publisher PDF files, table images and full OCR are not redistributed. NBS Circular475 (1949), p.22, supplies the electrical-unit conversion and is identified in a separate evidence receipt. Previous releases retain their original notices unchanged.
+C. B. Willingham, W. J. Taylor, J. M. Pignocco, and F. D. Rossini, “Vapor pressures and boiling points of some paraffin, alkylcyclopentane, alkylcyclohexane, and alkylbenzene hydrocarbons,” *Journal of Research of the National Bureau of Standards* 35, 219–244 (1945). Used as the accessible primary surrogate for n-nonane and n-decane Antoine correlations.
+
+## International Critical Tables
+
+*International Critical Tables of Numerical Data, Physics, Chemistry and Technology*, volume III (1928). The public-domain Internet Archive scan was used for the density equation and n-decane coefficients.
+
+## Parent datasets
+
+The complete notices for the ThermoML-derived pressure data, Chickos-Acree compilation inputs, RDKit-derived identifiers, and previously reviewed calorimetry sources are preserved in `previous_v0_3/THIRD_PARTY_NOTICES.md` and its nested parent release.
+
+Source names and citations are provided for scholarly attribution. No endorsement by NIST, the original authors, publishers, API, or Internet Archive is implied.

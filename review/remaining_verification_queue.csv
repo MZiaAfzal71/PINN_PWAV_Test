@@ -1,6 +1,5 @@
 original_priority,reference_code,candidate_rows,additional_unapproved_training_molecules,row_level_review_status,primary_url,caveat
-2,1947OSB/GIN,14,14,primary_table_verified_ancillary_lineage_hold,https://nistdigitalarchives.contentdm.oclc.org/digital/api/collection/p16009coll6/id/118316/download,"Reachable identities, not guaranteed acceptable labels; overlapping codes must not be summed."
-3,1977MAN/SEL,13,12,full_text_not_obtained,https://doi.org/10.1016/0021-9614(77)90202-6,"Reachable identities, not guaranteed acceptable labels; overlapping codes must not be summed."
+3,1977MAN/SEL,13,12,closed_full_text_not_obtained_after_metadata_and_access_followup,https://doi.org/10.1016/0021-9614(77)90202-6,"Highest remaining source opportunity. Full methods, tables, footnotes and correction lineage are still required before any approval."
 5,1969WAD,7,1,full_primary_review,https://actachemscand.ki.ku.dk/pdf/acta_vol_23_p2061-2064.pdf,"Reachable identities, not guaranteed acceptable labels; overlapping codes must not be summed."
 6,1980MAJ/WAG,31,7,full_text_not_obtained,https://doi.org/10.1016/0021-9614(80)90152-4,"Reachable identities, not guaranteed acceptable labels; overlapping codes must not be summed."
 7,1981GAT/STR,8,7,abstract_only,https://doi.org/10.1007/BF00653098,"Reachable identities, not guaranteed acceptable labels; overlapping codes must not be summed."

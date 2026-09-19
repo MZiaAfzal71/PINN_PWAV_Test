@@ -1,3 +1,1 @@
-numpy==2.3.5
-pandas==2.2.3
-rdkit==2025.9.6
+# v0.4 rebuild and verification use only the Python 3.12 standard library.

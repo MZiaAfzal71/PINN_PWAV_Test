@@ -1,0 +1,5 @@
+primary_name,source_doi,primary_H,primary_unit,source_locator,candidate_reference_code_under_investigation,assignment_confirmed,training_allowed,note
+Cyclopentanone,10.3891/acta.chem.scand.16-0046,10.21,kcal/mol,Table7 p.51; calorimetry description p.48,1968PLA/WIL,False,False,Numerical resemblance only. Do not borrow combustion uncertainties. 
+Cyclopentanol,10.3891/acta.chem.scand.16-0046,13.74,kcal/mol,Table7 p.51; calorimetry description p.48,1968PLA/WIL,False,False,"Numerical resemblance only. Do not borrow combustion uncertainties. Same value and sample source appear in 1966WAD; possible reused measurement, not additional evidence."
+Cyclohexanone,10.3891/acta.chem.scand.16-0046,10.77,kcal/mol,Table7 p.51; calorimetry description p.48,1968PLA/WIL,False,False,Numerical resemblance only. Do not borrow combustion uncertainties. 
+Cyclohexanol,10.3891/acta.chem.scand.16-0046,14.82,kcal/mol,Table7 p.51; calorimetry description p.48,1968PLA/WIL,False,False,Numerical resemblance only. Do not borrow combustion uncertainties. 

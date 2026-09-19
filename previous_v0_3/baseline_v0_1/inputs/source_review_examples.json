@@ -1,0 +1,48 @@
+{
+  "review_date": "2026-09-14",
+  "evidence_level": "Original-study abstracts and numeric metadata in supplied ThermoML archive; full methods sections not inspected.",
+  "examples": [
+    {
+      "compound": "ethyl decanoate",
+      "source_doi": "10.1021/je900093h",
+      "compendium_reference": "2009ZAI/PAU",
+      "compendium_record_id": "rdr250199#csvline12300",
+      "compendium_H_kJ_mol": 69.9,
+      "compendium_T_K": 305.0,
+      "thermoml_record_id": "10.1021/je900093h#d3#p1#r1",
+      "thermoml_H_kJ_mol": 69.9,
+      "thermoml_T_K": 304.79,
+      "finding": "Same source, method and enthalpy, with a rounded temperature in the compendium: treat as a duplicate candidate, not two independent labels.",
+      "evidence": "The original-study abstract archived in ThermoML reports calorimetric vaporization enthalpy 69.9 kJ/mol at about 304.8 K and separate Knudsen pressure measurements.",
+      "remaining": "Inspect the full methods, corrections and table lineage before final duplicate consolidation or independence certification."
+    },
+    {
+      "compound": "cyclohexyl butanoate",
+      "source_doi": "10.1021/je025634v",
+      "compendium_reference": "2003ZAI/VER",
+      "compendium_record_id": "rdr250199#csvline10840",
+      "compendium_H_kJ_mol": 60.1,
+      "compendium_T_K": 298.0,
+      "thermoml_record_id": "10.1021/je025634v#d9#p1#r1",
+      "thermoml_H_kJ_mol": 58.72,
+      "thermoml_T_K": 315.57,
+      "finding": "Same source with values at different temperatures. They are not interchangeable same-temperature targets; investigate whether the reference-temperature value derives from the measured-temperature value.",
+      "evidence": "The original-study abstract archived in ThermoML distinguishes calorimetry, transpiration and Knudsen methods. ThermoML supplies separate transpiration and Knudsen pressure series.",
+      "remaining": "Recover actual thermal corrections and standard/saturation conventions. The abstract mentions refinement of Knudsen results using the three methods, so audit possible cross-method dependence; do not assume independence merely because method names differ."
+    },
+    {
+      "compound": "(-)-verbenone",
+      "source_doi": "10.1016/j.jct.2013.01.009",
+      "compendium_reference": "2013STE/FUL",
+      "compendium_record_id": "rdr250199#csvline10618",
+      "compendium_H_kJ_mol": 58.9,
+      "compendium_T_K": 298.0,
+      "thermoml_record_id": "10.1016/j.jct.2013.01.009#d18#p1#r1",
+      "thermoml_H_kJ_mol": 58.9,
+      "thermoml_T_K": 298.15,
+      "finding": "Same source and enthalpy, with rounded reference temperature. Preserve one underlying measurement lineage rather than adding a second label.",
+      "evidence": "The original-study abstract archived in ThermoML distinguishes static vapor-pressure measurements from direct Calvet microcalorimetry.",
+      "remaining": "Check the full methods, measurement versus reference temperature, exact stereoisomer and correction dependence before final inclusion."
+    }
+  ]
+}

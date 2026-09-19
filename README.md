@@ -1,51 +1,41 @@
-# Enthalpy source verification v0.3.0
+# Enthalpy source verification v0.4.0
 
-**42 primary labels on 41 training molecules are eligible. The original 100-training-molecule gate remains on hold; 59 more are needed.** This update adds five eligible Lund labels and documents fourteen NIST labels whose pressure-slope correction lineage remains unresolved. No models were fitted.
+**The strict direct-enthalpy pool remains 42 labels on 41 training molecules. The inherited 100-molecule gate is still 59 molecules short, so main model fitting remains on hold.** No split changed and no model was fitted.
 
-Read `SOURCE_REVIEW_REPORT.md` for source links, corrections, uncertainty interpretation, limitations and the next verification priorities.
+This release completes the archival follow-up for 14 values from Osborne and Ginnings (1947). The published latent heat is `L = gamma - beta`, where `gamma` is the measured electrical energy per withdrawn mass and `beta = T v dp_sat/dT` is calculated from vapor-pressure and liquid-volume data.
+
+The result is a two-tier freeze:
+
+- All 14 published `L` values are **sensitivity-only**. They cannot enter primary training, validation, or test.
+- All 14 measured `gamma` values are frozen as **coupled PINN physics constraints**, not as direct enthalpy labels.
+
+The accessible archival inputs reproduce 7 of the 14 printed beta values by nearest 0.01 international J/g rounding. Seven do not reproduce at that precision. Twelve pressure-slope inputs are present in the cited API table family; the n-nonane and n-decane slopes use an accessible 1945 primary correlation as a surrogate because the exact cited per-compound entries were not recovered. All 14 liquid-volume inputs are traced.
 
 | Use | File |
 |---|---|
-| Current primary labels | `frozen/enthalpy_primary_labels.csv` |
-| All 751 candidates and current decisions | `frozen/enthalpy_candidates_reviewed.csv` |
-| NIST values normalized but ineligible | `frozen/enthalpy_nist_ancillary_hold.csv` |
-| Unique eligible training molecules | `frozen/training_enthalpy_molecules.csv` |
-| Original numeric transcriptions and source-driven decisions | `review/primary_table_transcriptions.csv` |
-| Source identities and review/access status | `review/source_register.csv` |
-| NIST correction/unit arithmetic | `evidence/nist_conversion_checks.csv` |
-| Six published water-correction runs | `review/1971_methoxyethanol_correction_runs.csv` |
-| Full-InChI mapping and source overlap receipts | `evidence/identity_verification.csv`, `evidence/source_overlap_check.csv` |
-| Remaining verification opportunities | `review/remaining_verification_queue.csv` |
-| Software verification and rebuild results | `evidence/validation.json`, `evidence/reproducibility.json` |
+| Unchanged strict direct-H labels | `frozen/enthalpy_primary_labels.csv` |
+| Unchanged unique strict training molecules | `frozen/training_enthalpy_molecules.csv` |
+| Current decisions for all 751 candidates | `frozen/enthalpy_candidates_reviewed.csv` |
+| Published NIST L values, sensitivity only | `frozen/enthalpy_nist_sensitivity_labels.csv` |
+| Raw NIST gamma physics constraints | `frozen/enthalpy_nist_gamma_constraints.csv` |
+| Compound-level beta reconstruction | `evidence/nist_ancillary_reconstruction.csv` |
+| Molecule-level pressure-source overlap check | `evidence/nist_pressure_lineage_overlap.csv` |
+| Constraint equation and leakage rules | `PINN_CONSTRAINT_PROTOCOL.md`, `evidence/modeling_contract.json` |
+| Full findings and limitations | `SOURCE_REVIEW_REPORT.md` |
+| Remaining source-verification queue | `review/remaining_verification_queue.csv` |
 
-The complete original freeze is in `baseline_v0_1/`, unchanged. Use its pressure tables, split assignments and evaluation protocol. The previous review's files are archived in `previous_v0_2/`; its baseline dependency is shared at this release's root and checked by the current verifier. Those archived scripts are historical records, not the commands for this release. Do not concatenate historical label exports with current labels.
+The complete v0.3 release is preserved under `previous_v0_3/`, including the original v0.1 pressure data, molecular splits, and evaluation tables. Do not concatenate historical and current label exports.
 
-## Reproduce
+## Verify
 
-Python standard-library integrity and arithmetic checks:
-
-```bash
-python verify_review.py
-python check_readiness.py
-```
-
-The readiness command intentionally exits **2**, reporting `HOLD_ENTHALPY_PROVENANCE`. A successful integrity check does not open the scientific gate.
-
-With the environment pinned in `baseline_v0_1/requirements.txt`, including RDKit 2025.09.6:
+Only the Python standard library is required for the v0.4 calculations:
 
 ```bash
 python rebuild_review.py
 python verify_review.py
+python check_readiness.py
 ```
 
-The builder validates the original releases, interprets each reviewed primary name/formula through its recorded SMILES, checks the full InChI, and performs documented conversions. It reproduces scientific review inputs; it does not automatically verify a publication or certify an experiment.
+`verify_review.py` must report `PASS`. `check_readiness.py` intentionally exits with status 2 and reports `HOLD_ENTHALPY_PROVENANCE` because the strict direct-H gate is not yet met.
 
-Optional retrieval of the ten original measurement/method/comparison PDFs for reinspection:
-
-```bash
-python fetch_primary_sources.py --out ../primary_papers
-```
-
-The downloader checks recorded SHA256 hashes. Availability and response time depend on the host. The NBS metrology reference has a separate official-PDF text receipt; direct local download was unavailable. Full source PDFs/OCR are not redistributed in this bundle.
-
-All eligible labels are at one temperature, from one laboratory and one training component. Printed random deviations, overall-error estimates and inequality directions remain separate. In particular, the 1970 paper prints overall uncertainty **>=0.2 kJ/mol**, with no finite upper bound; its small random errors must not be treated as total uncertainties. The report specifies source-driven moisture sensitivities before any model fitting. This is an AI-assisted source/table review without independent human sign-off.
+The source PDFs are not redistributed. Their official URLs, SHA256 hashes, page locators, and roles are recorded in `evidence/archival_document_register.json`. This is an AI-assisted document and table review without independent human sign-off.

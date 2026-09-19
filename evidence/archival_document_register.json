@@ -1,0 +1,50 @@
+[
+  {
+    "doi": "10.6028/jres.039.031",
+    "download_url": "https://nistdigitalarchives.contentdm.oclc.org/digital/api/collection/p16009coll6/id/118316/download",
+    "included_in_release": false,
+    "landing_url": "https://doi.org/10.6028/jres.039.031",
+    "locators": "Table 1, printed pp.465-469; method and beta definition, printed pp.460 and 469-470",
+    "role": "Primary calorimetry and printed gamma, beta, and L values",
+    "sha256": "0dcceb5865b44de7cb6fb02e5d0f23d1257e63106d1f135400095c1340abd288",
+    "source_key": "NIST_1947_OSBORNE_GINNINGS",
+    "title": "Measurements of heat of vaporization and heat capacity of a number of hydrocarbons",
+    "year": 1947
+  },
+  {
+    "doi": "10.6028/NBS.CIRC.461",
+    "download_url": "https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular461.pdf",
+    "included_in_release": false,
+    "landing_url": "https://www.nist.gov/publications/circular-bureau-standards-no-461selected-values-properties-hydrocarbons",
+    "locators": "Printed pp.86-93 and 122-130; absolute-temperature convention on printed p.3",
+    "role": "Bound API Research Project 44 molecular-volume and Antoine tables",
+    "sha256": "720ea51fea0d1aa26fb887090221eec030185b88308ac1d3633d08c9e6d75cf1",
+    "source_key": "NBS_CIRCULAR_461",
+    "title": "Selected Values of Properties of Hydrocarbons, NBS Circular 461",
+    "year": 1947
+  },
+  {
+    "doi": "",
+    "download_url": "https://nvlpubs.nist.gov/nistpubs/jres/35/jresv35n3p219_A1b.pdf",
+    "included_in_release": false,
+    "landing_url": "https://nvlpubs.nist.gov/nistpubs/jres/35/jresv35n3p219_A1b.pdf",
+    "locators": "Table 3, printed p.239, PDF p.21",
+    "role": "Accessible primary Antoine correlations for n-nonane and n-decane; surrogate for unavailable exact cited slope entries",
+    "sha256": "d9687895ce24d7bd4439896a950259c771d432582e54dd2486a37a9152e848ef",
+    "source_key": "WILLINGHAM_1945",
+    "title": "Vapor pressures and boiling points of some paraffin, alkylcyclopentane, alkylcyclohexane, and alkylbenzene hydrocarbons",
+    "year": 1945
+  },
+  {
+    "doi": "",
+    "download_url": "https://archive.org/download/int-cr-tab-v-3/Int_cr_tab_v3.pdf",
+    "included_in_release": false,
+    "landing_url": "https://archive.org/details/int-cr-tab-v-3",
+    "locators": "Density equation and n-decane row, printed pp.27 and 30; PDF pp.40 and 43",
+    "role": "Cited density source; n-decane density equation used to obtain the 25 C specific volume",
+    "sha256": "7e591bbbf5ef10306ba01f00e8a4dd2628daf829993fb3f7382115fd9a94473a",
+    "source_key": "ICT_VOL3",
+    "title": "International Critical Tables, volume III",
+    "year": 1928
+  }
+]

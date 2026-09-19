@@ -1,0 +1,70 @@
+priority,reference_code,new_candidate_training_molecules,cumulative_candidate_training_molecules,new_molecule_ids_json,certified_molecules_from_this_plan,interpretation
+1,1966WAD,18,18,"[""mol_212f24f877214356"", ""mol_2465ec339bda2cbb"", ""mol_39beef09cdd1ae08"", ""mol_435971c8aa9ce0da"", ""mol_478c9e57637d58f1"", ""mol_502267b1d358ae7d"", ""mol_5fa3d4f920d98423"", ""mol_670136e04246f1d5"", ""mol_6dc54388549b234e"", ""mol_6ea740b63f4d7f2b"", ""mol_754b018a16a84522"", ""mol_83a135e5c50b66c1"", ""mol_8b6a2383c538f690"", ""mol_a3ec1070c8366fe2"", ""mol_b4b87befe28d84ce"", ""mol_b8293313f61ea38f"", ""mol_c30b4ae49b848357"", ""mol_e55299b0f2600cdb""]",0,potential source coverage only; labels may fail primary-methods review
+2,1947OSB/GIN,14,32,"[""mol_03247da988422eaf"", ""mol_2ea49b3823ebd7ad"", ""mol_3147d9e632f76065"", ""mol_3fd637a4d667fe51"", ""mol_913f04ec4de50c29"", ""mol_a3ab0bd2d4d80422"", ""mol_af4829eb52c939fe"", ""mol_b1820f534fb61402"", ""mol_b44b37c017007981"", ""mol_b94bab3d5b62c755"", ""mol_d395bc83f11503fd"", ""mol_d40206d67276aa8c"", ""mol_e983a25bd52a944d"", ""mol_eb0e7cd1593e34a5""]",0,potential source coverage only; labels may fail primary-methods review
+3,1977MAN/SEL,12,44,"[""mol_2c8fece1c354948f"", ""mol_2e538f5e181d5946"", ""mol_41edcf15887aae47"", ""mol_4ffa7abfb5a2e402"", ""mol_5e1a76b3fc001a63"", ""mol_71d239be146a61dd"", ""mol_a39fe39f3d910b4e"", ""mol_a557d965b4ca95e1"", ""mol_c24403b08adc6841"", ""mol_d079a9561d9d2641"", ""mol_e687bcf74e76aad5"", ""mol_fe38c48a132d8ec5""]",0,potential source coverage only; labels may fail primary-methods review
+4,1968WAD,9,53,"[""mol_2d09dab0a2be3f90"", ""mol_528932d2a9841ae7"", ""mol_5a4aa50dd3cafc66"", ""mol_71ac04ebc05b85f5"", ""mol_77bbf943053f2531"", ""mol_7a5b68b203cc6270"", ""mol_8411a1787a17bdb0"", ""mol_b633c02df2e0c63b"", ""mol_d2d85289da26a082""]",0,potential source coverage only; labels may fail primary-methods review
+5,1969WAD,7,60,"[""mol_784ee3742c50210b"", ""mol_7e0d1a628651aee9"", ""mol_969f34406f44f7e7"", ""mol_b4ec50115958b3dd"", ""mol_cdcd3722df880b7b"", ""mol_cdea8ee7666036ab"", ""mol_e9bda82626d344ab""]",0,potential source coverage only; labels may fail primary-methods review
+6,1980MAJ/WAG,7,67,"[""mol_024c11ca89792376"", ""mol_4e6567a0dc6bd494"", ""mol_6a1b88d7d4729d66"", ""mol_896a74ad0b2a7fde"", ""mol_a6ed1653bde80123"", ""mol_e82f68770fb0a3fb"", ""mol_fc1211201dbfeedf""]",0,potential source coverage only; labels may fail primary-methods review
+7,1981GAT/STR,6,73,"[""mol_241178e06777b8f6"", ""mol_2f2b484f1c3d108f"", ""mol_70e48880798be543"", ""mol_8568098f87e46d1f"", ""mol_bcfe0436200b409a"", ""mol_e36df2c2d963afd3""]",0,potential source coverage only; labels may fail primary-methods review
+8,1926MAT,5,78,"[""mol_239cb7e490ad2a91"", ""mol_253d8d3c7e0ad521"", ""mol_5acfd4736e755185"", ""mol_9250348909aba0f8"", ""mol_dd7217c8aa001588""]",0,potential source coverage only; labels may fail primary-methods review
+9,1977STRI/SUN,4,82,"[""mol_30519df461efd318"", ""mol_c1c12a449ac15fd2"", ""mol_ea37acee7bc3d9f6"", ""mol_f23ee274fe9afdfa""]",0,potential source coverage only; labels may fail primary-methods review
+10,1980MAJ/SVA,4,86,"[""mol_520d932204fca4b7"", ""mol_69df6d03bf2d6749"", ""mol_c555c47fe3d2bf7e"", ""mol_f45d44d06aa6449e""]",0,potential source coverage only; labels may fail primary-methods review
+11,1985MAJ/SVO2,4,90,"[""mol_34651b4ffde1812d"", ""mol_7bd3eb1878fd3045"", ""mol_dee0d48887c32f73"", ""mol_f32efffa3cd8e3f1""]",0,potential source coverage only; labels may fail primary-methods review
+12,1989VOR/KLY,4,94,"[""mol_28d861e75826cef3"", ""mol_8af87cc50053180a"", ""mol_9b5c2e3993415780"", ""mol_e840c319a89074e3""]",0,potential source coverage only; labels may fail primary-methods review
+13,1968PLA/WIL,3,97,"[""mol_55b6d752028fb5df"", ""mol_5feb1fde294beccb"", ""mol_8c26cc46761de673""]",0,potential source coverage only; labels may fail primary-methods review
+14,1970HOW/WAD,3,100,"[""mol_25b76921742ed7fa"", ""mol_5dbb586fa38c6136"", ""mol_f485c31dbb304f3b""]",0,potential source coverage only; labels may fail primary-methods review
+15,1971KUS/WAD,3,103,"[""mol_21a4cd711754eeed"", ""mol_2901cf755cab0466"", ""mol_b482dd7c4a655efd""]",0,potential source coverage only; labels may fail primary-methods review
+16,1988KNA/SAB,3,106,"[""mol_3590edb9884753b9"", ""mol_4f13a4696bbfcaf9"", ""mol_d3125f71fb8f9281""]",0,potential source coverage only; labels may fail primary-methods review
+17,1996VIT/CHA,3,109,"[""mol_58c591d9024d1c78"", ""mol_7a77950532c8e700"", ""mol_bf39f6deed5d4b6a""]",0,potential source coverage only; labels may fail primary-methods review
+18,1970KUS/WAD,2,111,"[""mol_91aa5b5594ca491a"", ""mol_f4140df6fa2e15f2""]",0,potential source coverage only; labels may fail primary-methods review
+19,1972MOR,2,113,"[""mol_3bc540c095f58f95"", ""mol_c38e9861aa13f05a""]",0,potential source coverage only; labels may fail primary-methods review
+20,1979MAJ/SVO,2,115,"[""mol_256a0ea2592048b0"", ""mol_538c4f0d7c4ce97e""]",0,potential source coverage only; labels may fail primary-methods review
+21,1981HOS/SCO,2,117,"[""mol_d256cec7b59305ff"", ""mol_fb79232c4db917be""]",0,potential source coverage only; labels may fail primary-methods review
+22,1989AN/HU,2,119,"[""mol_c5207e620c9fcfd3"", ""mol_e6f8f97a2caa00b9""]",0,potential source coverage only; labels may fail primary-methods review
+23,2007RIB/FRE,2,121,"[""mol_9d47f5f4c0b23422"", ""mol_f51711463f7a60d1""]",0,potential source coverage only; labels may fail primary-methods review
+24,2010RIB/AMA,2,123,"[""mol_4581eaef241767fe"", ""mol_467811238401dcaa""]",0,potential source coverage only; labels may fail primary-methods review
+25,1901KAH2,1,124,"[""mol_62b1e6f80fd72085""]",0,potential source coverage only; labels may fail primary-methods review
+26,1923AWB/GRI,1,125,"[""mol_046f2add717f4221""]",0,potential source coverage only; labels may fail primary-methods review
+27,1931MAT/FEH,1,126,"[""mol_680d2c2ef877ca4d""]",0,potential source coverage only; labels may fail primary-methods review
+28,1949WAD/KNO,1,127,"[""mol_ca0440f5ec95bc5f""]",0,potential source coverage only; labels may fail primary-methods review
+29,1951BAR/MCC,1,128,"[""mol_e43335be86f26619""]",0,potential source coverage only; labels may fail primary-methods review
+30,1956SCO/MCC2,1,129,"[""mol_b0c6dc76ddc0873b""]",0,potential source coverage only; labels may fail primary-methods review
+31,1959MCC/DOU,1,130,"[""mol_97895e747db97ae6""]",0,potential source coverage only; labels may fail primary-methods review
+32,1962WAD/SMI,1,131,"[""mol_c187c0fbd800fefd""]",0,potential source coverage only; labels may fail primary-methods review
+33,1963MCC/LAI,1,132,"[""mol_b6b13d8dfbd75423""]",0,potential source coverage only; labels may fail primary-methods review
+34,1967HAL/LEE,1,133,"[""mol_360d41877d5341ed""]",0,potential source coverage only; labels may fail primary-methods review
+35,1967SCO/BER,1,134,"[""mol_115984f9be727624""]",0,potential source coverage only; labels may fail primary-methods review
+36,1970HAR/HEA,1,135,"[""mol_cba4c6228a6938ca""]",0,potential source coverage only; labels may fail primary-methods review
+37,1972MAN,1,136,"[""mol_6eb44d0732fcdc70""]",0,potential source coverage only; labels may fail primary-methods review
+38,1973COU/LEE,1,137,"[""mol_2e302d909c9e5e5c""]",0,potential source coverage only; labels may fail primary-methods review
+39,1973GEI/QUI,1,138,"[""mol_301d3a83ae1e6ae0""]",0,potential source coverage only; labels may fail primary-methods review
+40,1973SVO/VES,1,139,"[""mol_fb8c516f3cf70b3f""]",0,potential source coverage only; labels may fail primary-methods review
+41,1975BER/OLO,1,140,"[""mol_df36260e25a0f59a""]",0,potential source coverage only; labels may fail primary-methods review
+42,1979KUD/KUD,1,141,"[""mol_c12442c83d78b47e""]",0,potential source coverage only; labels may fail primary-methods review
+43,1981HOS/SCO3,1,142,"[""mol_84afa114cb8b9453""]",0,potential source coverage only; labels may fail primary-methods review
+44,1981VAR/BUL,1,143,"[""mol_517756553f493ba0""]",0,potential source coverage only; labels may fail primary-methods review
+45,1982BYS/MAN,1,144,"[""mol_953db3858ca974a4""]",0,potential source coverage only; labels may fail primary-methods review
+46,1982FUR/SAK,1,145,"[""mol_6fbb7c525fc1c495""]",0,potential source coverage only; labels may fail primary-methods review
+47,1985MAR/MAN,1,146,"[""mol_ecea6633cd348403""]",0,potential source coverage only; labels may fail primary-methods review
+48,1986NIL/WAD,1,147,"[""mol_8b8ce5ecf64b8081""]",0,potential source coverage only; labels may fail primary-methods review
+49,1987ATI/SAI,1,148,"[""mol_8557db3d1a35156c""]",0,potential source coverage only; labels may fail primary-methods review
+50,1988BAS/NIL,1,149,"[""mol_57ae3fd1e1d200c6""]",0,potential source coverage only; labels may fail primary-methods review
+51,1989AN/ZHE,1,150,"[""mol_60a1aefe4aec9d39""]",0,potential source coverage only; labels may fail primary-methods review
+52,1990KNA/SAB,1,151,"[""mol_2483b3ccb2b39f62""]",0,potential source coverage only; labels may fail primary-methods review
+53,1990LEI/PIL2,1,152,"[""mol_299a215a96655c24""]",0,potential source coverage only; labels may fail primary-methods review
+54,1991ROZ/SAF,1,153,"[""mol_8477b7b46a4f3d7e""]",0,potential source coverage only; labels may fail primary-methods review
+55,1991SHA/MIS,1,154,"[""mol_13ff42623f3cf866""]",0,potential source coverage only; labels may fail primary-methods review
+56,1992KOZ/KAB,1,155,"[""mol_41941ac4285969b3""]",0,potential source coverage only; labels may fail primary-methods review
+57,1992PAP/PIM,1,156,"[""mol_9b039da63aa3710c""]",0,potential source coverage only; labels may fail primary-methods review
+58,1992SVO/KUB2,1,157,"[""mol_3b77e9f37a5881a9""]",0,potential source coverage only; labels may fail primary-methods review
+59,2000MAT/MIR,1,158,"[""mol_4ed4476039d60934""]",0,potential source coverage only; labels may fail primary-methods review
+60,2002VAR/PAS,1,159,"[""mol_5e0efb61904c3869""]",0,potential source coverage only; labels may fail primary-methods review
+61,2003MAT/MIR,1,160,"[""mol_c75fad41ddce441e""]",0,potential source coverage only; labels may fail primary-methods review
+62,2006RIB/CAB5,1,161,"[""mol_d9ec66217e35d939""]",0,potential source coverage only; labels may fail primary-methods review
+63,2007RIC/BER,1,162,"[""mol_b9cfbb8959e61e2d""]",0,potential source coverage only; labels may fail primary-methods review
+64,2008ROU/LIM,1,163,"[""mol_4446e9b31e59fba3""]",0,potential source coverage only; labels may fail primary-methods review
+65,2009RIB/AMA,1,164,"[""mol_fa6014b0e97e2afc""]",0,potential source coverage only; labels may fail primary-methods review
+66,2009ZAI/PAU,1,165,"[""mol_fc2d93121de8a8dd""]",0,potential source coverage only; labels may fail primary-methods review
+67,2011MIR/KON,1,166,"[""mol_653d9692caede90e""]",0,potential source coverage only; labels may fail primary-methods review
+68,2014FRE/GOM2,1,167,"[""mol_327f3d3474e55905""]",0,potential source coverage only; labels may fail primary-methods review
+69,2014FRE/LEI,1,168,"[""mol_f599bee9d7f71e01""]",0,potential source coverage only; labels may fail primary-methods review

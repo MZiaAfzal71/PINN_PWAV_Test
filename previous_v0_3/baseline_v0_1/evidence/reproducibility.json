@@ -1,0 +1,128 @@
+{
+  "check": "Second complete build into a separate directory; compare all frozen files byte-for-byte",
+  "files": [
+    {
+      "file": "enthalpy_candidates.csv",
+      "identical": true,
+      "rebuilt_sha256": "0b6d9b86b5db8d9b8dff32d81286b81b18d5aa83c6f5eb4edf72d87f1948627e",
+      "sha256": "0b6d9b86b5db8d9b8dff32d81286b81b18d5aa83c6f5eb4edf72d87f1948627e"
+    },
+    {
+      "file": "enthalpy_decisions.csv",
+      "identical": true,
+      "rebuilt_sha256": "1754ccd7628d75b8da844c668810193a51c9dc66dc71cc84c4978359656a97c4",
+      "sha256": "1754ccd7628d75b8da844c668810193a51c9dc66dc71cc84c4978359656a97c4"
+    },
+    {
+      "file": "enthalpy_lineage_links.csv",
+      "identical": true,
+      "rebuilt_sha256": "dee4b021f554e53d9d26afedfc061f68f4d7143a2a5ca6eed5b595ab700bb153",
+      "sha256": "dee4b021f554e53d9d26afedfc061f68f4d7143a2a5ca6eed5b595ab700bb153"
+    },
+    {
+      "file": "enthalpy_primary_labels.csv",
+      "identical": true,
+      "rebuilt_sha256": "54a6de6d5c9c0ade74eb07dd163e170bf47cf2e2253725f882eaeeb376cf8842",
+      "sha256": "54a6de6d5c9c0ade74eb07dd163e170bf47cf2e2253725f882eaeeb376cf8842"
+    },
+    {
+      "file": "episode_records.csv",
+      "identical": true,
+      "rebuilt_sha256": "6e06d2fe597c3921f19211e49088241bff76288066525551c7ce77863d5659d3",
+      "sha256": "6e06d2fe597c3921f19211e49088241bff76288066525551c7ce77863d5659d3"
+    },
+    {
+      "file": "episodes.csv",
+      "identical": true,
+      "rebuilt_sha256": "156666d11ca2d8900c26e8a93406c5823fd87ef0053e426222ac48a5da6a0c64",
+      "sha256": "156666d11ca2d8900c26e8a93406c5823fd87ef0053e426222ac48a5da6a0c64"
+    },
+    {
+      "file": "group_edges.csv",
+      "identical": true,
+      "rebuilt_sha256": "780146d11050af4978407d346016b6fcab80b63e4767ef2c62abcc732aacfe1c",
+      "sha256": "780146d11050af4978407d346016b6fcab80b63e4767ef2c62abcc732aacfe1c"
+    },
+    {
+      "file": "molecular_review.csv",
+      "identical": true,
+      "rebuilt_sha256": "6f9e2dea2cb3a50026d17f095bf50dbd4ef301329be2e7ef622a070a30cacdc2",
+      "sha256": "6f9e2dea2cb3a50026d17f095bf50dbd4ef301329be2e7ef622a070a30cacdc2"
+    },
+    {
+      "file": "pressure_ceiling_sensitivity.json",
+      "identical": true,
+      "rebuilt_sha256": "655feda356173fa50dab869f855e151c32919a2d7580e9633fdf0a2c763a345b",
+      "sha256": "655feda356173fa50dab869f855e151c32919a2d7580e9633fdf0a2c763a345b"
+    },
+    {
+      "file": "pressure_observations.csv",
+      "identical": true,
+      "rebuilt_sha256": "d1ed1adaa6ce3417347fc3b7957631dcccdfedc3b6ecc0fbbf01b084db5ef2b4",
+      "sha256": "d1ed1adaa6ce3417347fc3b7957631dcccdfedc3b6ecc0fbbf01b084db5ef2b4"
+    },
+    {
+      "file": "source_aliases_for_grouping.csv",
+      "identical": true,
+      "rebuilt_sha256": "602f84e1188cd20c6c09423ad43f2c270caca04963565d71ab0027ff682d0b77",
+      "sha256": "602f84e1188cd20c6c09423ad43f2c270caca04963565d71ab0027ff682d0b77"
+    },
+    {
+      "file": "source_review_queue.csv",
+      "identical": true,
+      "rebuilt_sha256": "7df382e896d7d40f0761998cce90690b5f60d70c898e645b82d18885371402fe",
+      "sha256": "7df382e896d7d40f0761998cce90690b5f60d70c898e645b82d18885371402fe"
+    },
+    {
+      "file": "source_series_review.csv",
+      "identical": true,
+      "rebuilt_sha256": "c4ab51044426e3e4ed32b4a9bc4bdcf0c1c5202b09910ccaa5af8bafdcb419de",
+      "sha256": "c4ab51044426e3e4ed32b4a9bc4bdcf0c1c5202b09910ccaa5af8bafdcb419de"
+    },
+    {
+      "file": "split_assignments.csv",
+      "identical": true,
+      "rebuilt_sha256": "a30390d2a238876bab474d65d221ae4977f438b06d6dd2abe2038444f6d41374",
+      "sha256": "a30390d2a238876bab474d65d221ae4977f438b06d6dd2abe2038444f6d41374"
+    },
+    {
+      "file": "summary.json",
+      "identical": true,
+      "rebuilt_sha256": "49b3c50fc68aeca2cda18b9b05d7f12c831b169e21901d90569d364a22b1262b",
+      "sha256": "49b3c50fc68aeca2cda18b9b05d7f12c831b169e21901d90569d364a22b1262b"
+    },
+    {
+      "file": "test_anchors.csv",
+      "identical": true,
+      "rebuilt_sha256": "f9bf04d566ce983bdbbdd38594d296059e3ecc4474079a0ab81163e370e380ba",
+      "sha256": "f9bf04d566ce983bdbbdd38594d296059e3ecc4474079a0ab81163e370e380ba"
+    },
+    {
+      "file": "test_cold_targets.csv",
+      "identical": true,
+      "rebuilt_sha256": "50893818f120c507b2d5fa6a2550203e6e695d483af9a07b48b88d47d5068562",
+      "sha256": "50893818f120c507b2d5fa6a2550203e6e695d483af9a07b48b88d47d5068562"
+    },
+    {
+      "file": "train_pressure.csv",
+      "identical": true,
+      "rebuilt_sha256": "161ce729eed6350b9aec8a94c18f0e1afe6eab8ba268efd393c1f2d7fd7bf86e",
+      "sha256": "161ce729eed6350b9aec8a94c18f0e1afe6eab8ba268efd393c1f2d7fd7bf86e"
+    },
+    {
+      "file": "validation_anchors.csv",
+      "identical": true,
+      "rebuilt_sha256": "036727ff9c74a248046fd1d8b47a4a14dfec06223ccb62a774ff9ae71faad6ba",
+      "sha256": "036727ff9c74a248046fd1d8b47a4a14dfec06223ccb62a774ff9ae71faad6ba"
+    },
+    {
+      "file": "validation_cold_targets.csv",
+      "identical": true,
+      "rebuilt_sha256": "81c58cfe75f3cdfca5b8375daa59dcb2506e30eebd5050c9fd9c3ed700f6355f",
+      "sha256": "81c58cfe75f3cdfca5b8375daa59dcb2506e30eebd5050c9fd9c3ed700f6355f"
+    }
+  ],
+  "files_compared": 20,
+  "mismatches": 0,
+  "status": "PASS"
+}
