@@ -1,0 +1,7 @@
+run,mass_evaporated_mg,water_uptake_mg,electrical_energy_J,apparent_H_kJ_mol,condensation_correction_kJ_mol,dissolution_correction_kJ_mol,corrected_H_kJ_mol,source_doi,source_page,source_table,table_image_visually_checked
+1,81.854,0.260,47.909,44.538,0.588,0.039,45.165,10.3891/acta.chem.scand.25-0219,221,1,True
+2,82.877,0.452,48.029,44.098,1.010,0.067,45.175,10.3891/acta.chem.scand.25-0219,221,1,True
+3,82.486,0.319,48.115,44.387,0.716,0.047,45.150,10.3891/acta.chem.scand.25-0219,221,1,True
+4,81.438,0.125,47.929,44.784,0.284,0.019,45.087,10.3891/acta.chem.scand.25-0219,221,1,True
+5,79.483,0.059,47.027,45.022,0.137,0.009,45.168,10.3891/acta.chem.scand.25-0219,221,1,True
+6,79.829,0.114,47.170,44.963,0.264,0.017,45.244,10.3891/acta.chem.scand.25-0219,221,1,True

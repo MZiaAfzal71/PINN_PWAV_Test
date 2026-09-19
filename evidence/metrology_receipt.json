@@ -1,0 +1,9 @@
+{
+  "citation": "F.B. Silsbee. Establishment and Maintenance of the Electrical Units. NBS Circular 475, issued 1949-06-30.",
+  "conversion": "1 US international joule = 1.000165 absolute joules",
+  "factor": "1.000165",
+  "locator": "Printed page22 / PDF page28; US certified-unit conversion list",
+  "review_date": "2026-09-18",
+  "source_url": "https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular475.pdf",
+  "verification": "Official NIST PDF text obtained by web reader. Direct byte download returned 403; no PDF checksum or local-byte verification claimed."
+}

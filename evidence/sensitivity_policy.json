@@ -1,0 +1,26 @@
+{
+  "fixed_before_model_fitting": true,
+  "selection_basis": "Primary source quality/correction statements; no pressure residuals or evaluation losses.",
+  "main_pool": "frozen/enthalpy_primary_labels.csv",
+  "proposed_checks": [
+    {
+      "name": "exclude_1970_hygroscopicity_source",
+      "excluded_record_ids": [
+        "rdr250199#csvline4156",
+        "rdr250199#csvline8926"
+      ],
+      "reason": "Known uncorrected methoxy water uptake and no finite source-wide total error upper bound."
+    },
+    {
+      "name": "additional_exclusion_of_1971_water_corrected_rows",
+      "excluded_record_ids": [
+        "rdr250199#csvline1960",
+        "rdr250199#csvline3256"
+      ],
+      "reason": "Published water correction uses explicit 2.433 kJ/g constant with imperfect cited-reference trace."
+    }
+  ],
+  "gate_change": false,
+  "nist_included": false,
+  "model_fits_performed": false
+}

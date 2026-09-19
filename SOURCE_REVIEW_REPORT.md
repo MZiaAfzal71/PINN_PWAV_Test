@@ -1,75 +1,95 @@
-# Primary enthalpy review and unchanged evaluation freeze
+# Enthalpy verification follow-up: v0.3.0
 
-Review date: 17 September 2026. Release: v0.2.0. Parent: v0.1.0.
+18 September 2026. Parent review: v0.2.0. Original evaluation freeze: v0.1.0.
 
-## Result
+**Five additional labels pass the existing primary-calorimetry eligibility rule. The primary pool now has 42 labels on 41 training molecules.** Fourteen additional NIST rows have verified original tables, identities and unit conversions, but remain excluded pending their ancillary pressure-slope lineage review. The 100-approved-training-molecule project gate is unchanged: 59 more molecules are needed. No models were fitted.
 
-**37 independently measured calorimetric labels, representing 36 training molecules, have been promoted from quarantine.** Here, independence means the enthalpy was measured calorimetrically rather than inferred from a pressure–temperature curve or corrected with the benchmark pressure labels. It does not mean independent laboratories, instruments or systematic errors.
+| Result | v0.2 | v0.3 |
+|---|---:|---:|
+| Primary labels eligible for future training | 37 | 42 |
+| Unique training molecules represented | 36 | 41 |
+| Original-table candidate rows checked | 38 | 57 |
+| Candidates still excluded across the 751-row freeze | 714 | 709 |
+| NIST rows normalized but held separately | 0 | 14 |
+| Approved enthalpy temperatures | 298.15 K | 298.15 K |
+| Laboratories represented in the primary pool | 1 | 1 |
+| Frozen components represented in the primary pool | 1 | 1 |
 
-The first 14 priority reference codes cover 174 candidate rows and 100 training molecules. Full papers were obtained for four of those codes, along with both original calorimeter descriptions. Their original tables contain 38 directly measured candidate values. One remains on hold because its own source reports an unresolved conflicting result. Another candidate is a quoted, temperature-corrected historical value rather than a new experiment. The other ten reference codes remain unapproved because their full methods/tables or reference assignments could not be established.
+These are molecular identities and observations, not independent laboratories. Eligibility means adequate evidence for the reported calorimetric quantity under the documented policy, not that every systematic error has a modern uncertainty budget. The original 100-molecule threshold is a project feasibility criterion, not a universal statistical power or publication rule.
 
-| Measure | Result |
-|---|---:|
-| Original measurement papers fully reviewed | 4 |
-| Referenced apparatus papers reviewed | 2 |
-| Direct-measurement candidate values checked against table images | 38 |
-| Labels approved for future training | 37 |
-| Training molecular identities covered | 36 |
-| Candidate labels still quarantined across the whole freeze | 714 |
-| Additional approved training molecules needed for the existing gate | 64 |
-| Temperatures among approved labels | 298.15 K only |
-| Laboratories / frozen components among approved labels | 1 / 1 |
+## Five additional primary labels
 
-The **100-training-molecule feasibility gate remains unchanged and unmet**. It is a project planning criterion, not a universal publication standard or a statistical power calculation. The present review does not justify starting the main PINN comparison or claiming that the entire enthalpy dataset has been validated.
+All five belong to the existing training split and component. The original compendium values remain alongside the restored primary values. All temperatures are the reported 25°C, represented as 298.15 K; no new enthalpy extrapolation was applied.
 
-## Decisions supported by original papers
+| Compound | H at 298.15 K (kJ/mol) | Printed random deviation (kJ/mol) | Determinations | Primary source |
+|---|---:|---:|---:|---|
+| 2-Methoxyethanol | 45.17 | ±0.04 | 6 | Kusano–Wadsö 1971, Table 2, p.222 |
+| 2-Ethoxyethanol | 48.21 | ±0.05 | 8 | Kusano–Wadsö 1971, Table 2, p.222 |
+| 2-Propoxyethanol | 52.12 | ±0.10 | 7 | Kusano–Wadsö 1971, Table 2, p.222 |
+| 2-Methoxyethyl acetate | 50.27 | ±0.06 | 5 | Kusano–Wadsö 1970, Table 1, p.2038 |
+| 2-Butoxyethyl acetate | 59.54 | ±0.04 | 5 | Kusano–Wadsö 1970, Table 1, p.2038 |
 
-**1966 Wadsö — 18 approved rows.** The original values are in defined kcal/mol; conversion uses exactly 4.1840 kJ per defined kcal. The source reports a 25°C saturation-state liquid-to-vapor process. Its uncertainties include estimated systematic contributions and have no stated common confidence probability. The type A, B and C apparatus lineage is retained. Lower-purity ethyl isobutyrate and unquantified water in cyclopentanol carry explicit quality flags. The liquid label for tert-butanol is retained as reported, without asserting independently verified stable-liquid conditions near melting. [Original paper](https://actachemscand.ki.ku.dk/pdf/acta_vol_20_p0544-0552.pdf).
+The printed deviations are **twice the standard error of the mean for random error**. They are not total one-sigma uncertainties. The acetates' primary formulas were independently mapped to the frozen full InChIs. In particular, the ambiguous original name “ethylene glycol methyl ethyl acetate” is retained in the source-name field, with the verified interpretation 2-methoxyethyl acetate recorded separately.
 
-**1968 Wadsö — 10 approved rows.** Original tables distinguish the measured values from pressure-equation comparison values. Quoted deviations are twice the standard error of the mean; the separate possible systematic error bound of 0.08 kJ/mol is preserved. Footnote b identifies the 1-bromobutane value as a new measurement. It remains a separate experiment from the 1966 value, while counting as the same molecule. [Original paper](https://actachemscand.ki.ku.dk/pdf/acta_vol_22_p2438-2444.pdf).
+### Water uptake and uncertainty
 
-**1969 Wadsö — six approved rows, one held.** The current-work column reports direct calorimetry at 25.00°C with twice-standard-error deviations. Ethylenediamine is withheld: the proof note reports 45.66 kJ/mol from another calorimeter, compared with 44.98 kJ/mol in this paper. This source-raised conflict needs reconciliation. It was not detected by fitting the pressure data. Water was not quantified for either diamine; the retained 1,3-diaminopropane value carries that limitation. [Original paper](https://actachemscand.ki.ku.dk/pdf/acta_vol_23_p2061-2064.pdf).
+The [1971 alkoxyethanol paper](https://actachemscand.ki.ku.dk/pdf/acta_vol_25_p0219-0224.pdf) measures water uptake and corrects methoxyethanol and ethoxyethanol using electrical energy, evaporated mass and water uptake. Its Table 1 supplies six methoxyethanol runs. Every printed apparent enthalpy plus condensation and dissolution corrections reproduces its printed corrected value. The source obtains 45.17 kJ/mol from a joint fit. The simple mean of rounded corrected runs is 45.164833 kJ/mol; this is not claimed to reproduce that fit exactly. Propoxyethanol uptake was reported as very small. The authors print overall uncertainty ≤0.1 kJ/mol. This statement is separate from the random deviations.
 
-**1970 Howard and Wadsö — three approved rows, one held.** Table 1 supports acetonitrile, propionitrile and valeronitrile at 25.00°C. A second compendium acetonitrile entry traces to older Iwanciow calorimetry at 50–80°C, corrected in later work and quoted in Table 2. It is neither a second Howard measurement nor an exact duplicate to merge automatically; the original measurement and correction chain remain unverified. [Original paper](https://actachemscand.ki.ku.dk/pdf/acta_vol_24_p0145-0149.pdf).
+The [1970 acetate paper](https://actachemscand.ki.ku.dk/pdf/acta_vol_24_p2037-2042.pdf) prints an overall uncertainty of **≥0.2 kJ/mol**. The inequality was checked on the page image and retained verbatim as a numerical relation; it has not been silently reversed. It supplies no finite overall upper bound. Methoxy compounds gained about 0.02% water during measurement, without correction. Both acetate labels carry the source-wide systematic-error caution, and the methoxy acetate carries the specific moisture flag. They remain eligible under the existing policy, which already retains disclosed purity/moisture limitations in the absence of a source-reported contradictory measurement. They must not receive high confidence merely because their random SE is small.
 
-The [1960 apparatus paper](https://actachemscand.ki.ku.dk/pdf/acta_vol_14_p0566-0572.pdf) and [1966 apparatus paper](https://actachemscand.ki.ku.dk/pdf/acta_vol_20_p0536-0543.pdf) establish measurement from electrical energy and evaporated mass. Carrier-flow blanks, mass-loss and gas-density corrections are disclosed. Ancillary pressure enters apparatus operation/corrections; these are not derivatives fitted to the benchmark pressure curves. Reference substances check apparatus performance. Accordingly, the release does not claim that no pressure quantity was ever used.
+For a later robustness analysis, exclude the two 1970 acetate labels together and report the change; a stricter moisture-lineage check may additionally exclude the two water-corrected 1971 labels. These source-driven exclusions are specified before model fitting. They are not selected by agreement with pressure data. Do not use inverse random-SE weighting as if it represented total measurement precision.
 
-## Reference-by-reference status
+### Ancillary reference limitations retained
 
-Counts below are candidate rows in this frozen project, not the total number of measurements in each paper. Overlapping molecules must not be summed across sources.
+Both new Lund papers cite the verified [1966 apparatus description](https://actachemscand.ki.ku.dk/pdf/acta_vol_20_p0536-0543.pdf). Their additional citation to Acta 22 (1968), p.2434 does not match the archive: p.2434 belongs to an unrelated article spanning pp.2429–2437. The Wadsö paper with calorimeter modifications starts on [p.2438](https://actachemscand.ki.ku.dk/pdf/acta_vol_22_p2438-2444.pdf), making it a plausible intended reference, not a confirmed correction to the bibliography.
 
-| Priority code | Candidate rows | Approved | Status / primary paper lead |
-|---|---:|---:|---|
-| 1966WAD | 18 | 18 | Full primary review; [DOI](https://doi.org/10.3891/acta.chem.scand.20-0544) |
-| 1947OSB/GIN | 14 | 0 | NIST full text not obtained; [DOI](https://doi.org/10.6028/jres.039.031) |
-| 1977MAN/SEL | 13 | 0 | Full text not obtained; [DOI](https://doi.org/10.1016/0021-9614(77)90202-6) |
-| 1968WAD | 10 | 10 | Full primary review; [DOI](https://doi.org/10.3891/acta.chem.scand.22-2438) |
-| 1969WAD | 7 | 6 | One source-conflicted value held; [DOI](https://doi.org/10.3891/acta.chem.scand.23-2061) |
-| 1980MAJ/WAG | 31 | 0 | Full text not obtained; [DOI](https://doi.org/10.1016/0021-9614(80)90152-4) |
-| 1981GAT/STR | 8 | 0 | Effusion calorimetry mentioned in abstract; tables/methods unavailable; [publisher](https://link.springer.com/article/10.1007/BF00653098) |
-| 1926MAT | 12 | 0 | Full text and temperature corrections unverified; [DOI](https://doi.org/10.1021/ja01414a002) |
-| 1977STRI/SUN | 4 | 0 | Nitrile paper lead; full text not obtained; [DOI](https://doi.org/10.1016/0021-9614(77)90223-3) |
-| 1980MAJ/SVA | 24 | 0 | Full text not obtained; [DOI](https://doi.org/10.1016/0021-9614(80)90028-2) |
-| 1985MAJ/SVO2 | 21 | 0 | Ambiguous alcohol/pyridine assignment; two leads below |
-| 1989VOR/KLY | 4 | 0 | Bibliographic lead; original paper unavailable; [NIST reference](https://webbook.nist.gov/cgi/cbook.cgi?ID=C75183&Type=HVAP) |
-| 1968PLA/WIL | 4 | 0 | Assignment to these cyclic compounds unresolved; [bibliographic lead](https://doi.org/10.1021/ja01012a019) |
-| 1970HOW/WAD | 4 | 3 | Older corrected comparison value held; [DOI](https://doi.org/10.3891/acta.chem.scand.24-0145) |
-| **Total** | **174** | **37** | **36 unique approved molecules** |
+The 1971 water correction explicitly uses **2.433 kJ/g**. This is recorded as the source's numerical input; it has not been replaced by a modern water value. The exact cited-reference derivation of that constant was not established. Primary energy/mass measurement, the published correction mechanism and the run arithmetic are established; complete metrological traceability of every auxiliary constant is not claimed. This limitation motivates the predefined moisture sensitivity. The published label itself is preserved rather than recalculated from incomplete raw experimental records.
 
-The code **1985MAJ/SVO2** appears on 15 alcohol rows and six dimethylpyridine rows. The plausible leads are an [alcohol paper](https://doi.org/10.1016/0378-3812(85)90026-3) and a [dimethylpyridine/trimethylpyridine paper](https://doi.org/10.1016/0021-9614(85)90133-8). Assignment by chemical family is only an inference; no DOI has been silently substituted. The code **1968PLA/WIL** resolves through a NIST bibliography to a fluorinated-compound preparation paper. That mismatch needs the original table and compendium reference list; it is not yet a proven transcription error.
+## Osborne–Ginnings 1947: recovered and checked, still held
 
-The most useful next acquisitions are the Osborne–Ginnings 1947 paper and Månsson et al. 1977 paper: together they potentially cover 26 additional training molecules beyond the approved set. The remaining references can follow the existing priority list. Full PDFs with methods, tables, footnotes and referenced correction equations are needed; an abstract or a method letter cannot complete this review. No result guarantees that every remaining candidate will pass.
+The full 25-page paper was obtained from the [official NIST Digital Archives](https://nistdigitalarchives.contentdm.oclc.org/digital/collection/p16009coll6/id/118316/). Table 1 covers calorimetry at 25°C. Fourteen frozen candidate rows were visually transcribed, with exact primary-name-to-InChI checks. The pure ethylbenzene series was selected explicitly; its impure-sample series was not averaged into it. No new molecular identities were added from the other compounds in the paper.
 
-## What was restored, and what was preserved
+The table's energies are **US international J/g**, not modern molar kJ. [NBS Circular 475, p.22](https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular475.pdf) supplies the factor 1.000165 absolute J per US international J. Normalization uses
 
-The approved exports use the original **298.15 K measurement temperature**, instead of the compendium's 298 K shorthand. This restores the reported measurement temperature; it does not extrapolate an enthalpy to a different temperature. Original numerical precision and uncertainty conventions are retained. More digits from an exact kcal-to-kJ conversion do not imply greater experimental accuracy. Every old value, temperature and deviation remains alongside the reviewed version, with changes in `review/numeric_changes.csv`.
+`H [kJ/mol] = L [international J/g] × 1.000165 × M [g/mol] / 1000`.
 
-No correction to ideal-gas standard state has been made. Labels describe the liquid-to-real-vapor saturation process reported by the sources. Twenty-three approved rows lie inside their molecule's retained pressure-temperature envelope and 14 lie outside it; the latter remain auxiliary observations at their actual temperature. There is no manufactured pointwise pressure–enthalpy match or extrapolated pressure label. State stability and physics-collocation domains still require care when modeling begins.
+Each molar mass is explicit, using RDKit 2025.09.6 conventional natural-isotopic-average masses. This is a documented modern mass normalization of a primary specific-energy measurement. Extra output digits preserve arithmetic, not experimental accuracy. The reported 25°C used the historical International Temperature Scale; 298.15 K is its nominal representation, with no claim of conversion to ITS-90.
 
-Do not combine every deviation into a single Gaussian sigma column. In particular, the 1966 total estimates and later random standard errors differ. The later standard error may be recovered by dividing the quoted deviation by two, but this does not account for all systematic error. Do not divide the quoted number by the square root of the replicate count again. The 1968 systematic bound is separate, without an invented probability distribution.
+The measured electrical energy per withdrawn mass is gamma. The published latent heat is
 
-The original **492 training / 106 validation / 105 test molecules** and all source/structure components are unchanged. The primary evaluation remains **78 test episodes, 234 warm anchors and 512 cold targets**, using the original 20 kPa protocol. All approved enthalpies belong to the existing training component; none enter validation or test adaptation. Resolving the four measurement DOIs creates no new cross-partition link. DOI non-overlap supports the check but does not replace the methods review.
+`L = gamma − beta`, with `beta = T × v_liquid × dp_sat/dT`.
 
-No predictive model, pressure derivative or CC agreement score was used to choose the promoted labels. All baseline files are preserved and checked by SHA256. The numerical and structural checks validate the export and its provenance mapping; they are not independent experimental replication or human scientific sign-off.
+All fourteen printed subtractions pass exactly. Across these candidate rows, beta is approximately **0.00251–0.10654%** of L. The paper derives the pressure slopes and liquid volumes from API Research Project 44 tables and International Critical Tables, volume 3 (1928), identified as references 14 and 15. The original per-compound ancillary entries have not been traced.
 
-The four source papers come from one laboratory and yield only one enthalpy temperature. Thus, even after the remaining source-access problems are resolved, source diversity, temperature coverage and correlated apparatus errors must be reported. The ideal-vapor Clausius–Clapeyron residual remains an approximation; low pressure alone does not eliminate association effects. The original matched multitask control with identical enthalpy supervision remains essential for attributing any eventual benefit to the physics loss.
+These are principally calorimetric measurements with a small pressure-derived correction. They should not be described as pressure-curve-free, and the correction does not imply that the entire measurement is a pressure-derived pseudo-label. The measurement DOI does not overlap any frozen pressure DOI. That fact alone cannot establish upstream independence. The fourteen rows remain in `frozen/enthalpy_nist_ancillary_hold.csv`, with `training_allowed=False`, and do not count toward the primary gate.
+
+The authors estimate that the error is unlikely to exceed 0.1% for these hydrocarbons. That statement is stored separately as an author estimate, with no invented confidence probability or Gaussian sigma. Small source-applied run-temperature corrections and sample-purity limitations are disclosed. No ideal-gas-state transformation was applied.
+
+## Source attribution and repeated measurements
+
+The [1962 Sellers–Sunner paper](https://actachemscand.ki.ku.dk/pdf/acta_vol_16_p0046-0052.pdf), Table 7, reports calorimetric vaporization values for cyclopentanone, cyclopentanol, cyclohexanone and cyclohexanol. Their numerical resemblance to the four unresolved `1968PLA/WIL` candidates is a useful lead. It does not prove the compendium's source attribution, so no code or DOI was substituted and no new label was added.
+
+The neighboring uncertainties in that table belong to **combustion**, not vaporization, and must not be transferred. Cyclopentanol's 13.74 kcal/mol and sample source also appear in Wadsö 1966, which includes earlier measurements. The existing approved row is annotated as a possible repeated report of the same experiment. It is counted once. The 1962 report does not create a second independent observation.
+
+The alcohol/pyridine ambiguity in `1985MAJ/SVO2` is unresolved. The 2016 compendium reference-list PDF was not retrieved: the UMSL repository returned 403 and the UNT advertised download returned a request-validation challenge. No bypass was attempted. Earlier ambiguous-reference and inaccessible-full-text holds continue. The source-conflicted ethylenediamine value and the older temperature-corrected acetonitrile entry remain excluded.
+
+## Evaluation freeze and verification
+
+The entire v0.1 release remains byte-identical. The v0.2 review is also preserved with its own checksums. Current review exports retain all **751 original candidate IDs**, full InChIs, molecule IDs, source/structure components and split assignments. The five new eligible molecules all belong to the existing training component.
+
+- Molecular partitions: **492 train / 106 validation / 105 test**.
+- Primary 20 kPa test protocol: **78 episodes, 234 warm anchors, 512 cold targets**.
+- Eligible enthalpy labels: **42 train / 0 validation / 0 test**.
+- Primary labels within their molecule's retained pressure-temperature envelope: **23**; outside: **19**.
+
+Outside-envelope labels remain auxiliary observations at their reported temperature. No pressure extrapolation or artificial pointwise pressure–enthalpy join was created. No pressure fit, Clausius–Clapeyron residual, test loss or held-out target value was used to decide label eligibility. DOI and temperature metadata were used only for provenance and coverage checks.
+
+`verify_review.py` checks original release hashes, all candidate identities/splits, unchanged prior eligible values, the five new approvals, exact unit arithmetic, NIST quarantine, uncertainty inequality direction, correction arithmetic and preserved test records. `rebuild_review.py` reproduces the exports from the versioned scientific review inputs. Passing software checks supports data integrity; it does not replicate experiments or provide independent human scientific sign-off.
+
+## Next verification with the highest value
+
+1. Trace the 1947 ancillary pressure/volume entries in API Project 44 and International Critical Tables, then make an explicit primary-versus-sensitivity eligibility decision. Potential reach: 14 currently unapproved training molecules.
+2. Obtain the full [Månsson et al. 1977 paper](https://doi.org/10.1016/0021-9614(77)90202-6), including methods, tables, footnotes and correction references. It potentially reaches 12 additional molecules beyond the current primary pool, with overlap against other sources possible.
+3. Obtain the compendium reference list and original papers to resolve `1968PLA/WIL` and `1985MAJ/SVO2`. Consult `review/remaining_verification_queue.csv` for all remaining source opportunities; these counts are not guaranteed approvals.
+
+Main modeling remains on hold. The eventual comparison still requires a matched multitask control receiving identical enthalpy labels, and the low-pressure Clausius–Clapeyron relation must remain explicitly approximate.

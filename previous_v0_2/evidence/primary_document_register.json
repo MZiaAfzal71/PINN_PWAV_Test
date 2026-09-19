@@ -1,0 +1,58 @@
+[
+  {
+    "doi": "10.3891/acta.chem.scand.20-0544",
+    "evidence_id": "1966WAD",
+    "filename": "1966WAD.pdf",
+    "locator": "Tables 1 (p.545) and 3 (p.547); uncertainty p.546; methods p.544 and cited apparatus papers.",
+    "role": "measurement_paper",
+    "sha256": "ff83a8bdaad3652c26c4b681614e9713a87e7cf6874b14cd223be1e1ef58eb2c",
+    "url": "https://actachemscand.ki.ku.dk/pdf/acta_vol_20_p0544-0552.pdf"
+  },
+  {
+    "doi": "10.3891/acta.chem.scand.22-2438",
+    "evidence_id": "1968WAD",
+    "filename": "1968WAD.pdf",
+    "locator": "Tables 1 (p.2440) and 2 (p.2441); experimental p.2439; state/uncertainty p.2440.",
+    "role": "measurement_paper",
+    "sha256": "a3bf97f0ff50f22cb2939406f90a0bf6964e3af2a7fff3ae69bbeb537e73abb6",
+    "url": "https://actachemscand.ki.ku.dk/pdf/acta_vol_22_p2438-2444.pdf"
+  },
+  {
+    "doi": "10.3891/acta.chem.scand.23-2061",
+    "evidence_id": "1969WAD",
+    "filename": "1969WAD.pdf",
+    "locator": "Table 1, current-work column, p.2062; methods p.2061; uncertainty and proof note p.2062.",
+    "role": "measurement_paper",
+    "sha256": "f364f01785ef29c0170aa0eca30dda4c71f4c54e0a706535fc522154d7a0687a",
+    "url": "https://actachemscand.ki.ku.dk/pdf/acta_vol_23_p2061-2064.pdf"
+  },
+  {
+    "doi": "10.3891/acta.chem.scand.24-0145",
+    "evidence_id": "1970HOW/WAD",
+    "filename": "1970HOW_WAD.pdf",
+    "locator": "Table 1 p.146; methods pp.145–146; older calorimetry Table 2 and footnote h p.147.",
+    "role": "measurement_paper",
+    "sha256": "ec4a11c72a8feb401967f6babd8417132dd7e7c4f26dfe86db70399611bfcfe7",
+    "url": "https://actachemscand.ki.ku.dk/pdf/acta_vol_24_p0145-0149.pdf"
+  },
+  {
+    "citation": "Ingemar Wadsö. An Adiabatic Calorimeter for Measuring Heats of Vaporisation at 25°C. Acta Chem. Scand. 14 (1960), 566–572.",
+    "doi": "10.3891/acta.chem.scand.14-0566",
+    "evidence_id": "WAD1960_methods",
+    "evidence_paraphrase": "Type A: energy and weighed mass p.567; electrical measurement p.570; carrier-flow blank, leakage extrapolation and gas-displacement corrections pp.570–571. Hydrocarbon reference values check performance rather than determine the electrical energy scale.",
+    "filename": "WAD1960_methods.pdf",
+    "role": "referenced_method_paper",
+    "sha256": "10ee0f45237482fda68fe331ca9f23be14cf54786487fe91f8751a6fcfaf13fe",
+    "url": "https://actachemscand.ki.ku.dk/pdf/acta_vol_14_p0566-0572.pdf"
+  },
+  {
+    "citation": "Ingemar Wadsö. A Heat of Vaporization Calorimeter for Work at 25°C and for Small Amounts of Substances. Acta Chem. Scand. 20 (1966), 536–543.",
+    "doi": "10.3891/acta.chem.scand.20-0536",
+    "evidence_id": "WAD1966_methods",
+    "evidence_paraphrase": "Type C and B lineage: energy/mass p.537; electrical energy and blank corrections pp.539–540; residual gas-density correction pp.541–542; 25.00°C, saturation state and defined calorie p.542. Ancillary pressure-dependent corrections do not make these enthalpies pressure-curve derivatives. Ethanol uses low-carrier-flow measurements, not a pressure-fit extrapolation.",
+    "filename": "WAD1966_methods.pdf",
+    "role": "referenced_method_paper",
+    "sha256": "964ae983e50947a8fcf7cf2ed45907220f6fd239a76dcfea2a4ccbd27a181c69",
+    "url": "https://actachemscand.ki.ku.dk/pdf/acta_vol_20_p0536-0543.pdf"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "byte_identical": true,
+  "files": {
+    "evidence/identity_verification.csv": "79998d6c1fc63507b8a47c664de85b3cbe50c68451a6635698a975b5db95cfb6",
+    "evidence/source_overlap_check.csv": "642168666a0249de7805e2abdeaa852330560adc98b30977658670fce9bdc088",
+    "frozen/enthalpy_candidates_reviewed.csv": "9d1e4105d9d282d488a805823da3d07f777acfe0878d23161fc35d5cb6dd9b14",
+    "frozen/enthalpy_primary_labels.csv": "b5e89db265f1ac8fb5e8c30db54f2c5c57b2caa2165edc6f7b6b873b211385b3",
+    "frozen/summary.json": "8149663e74912679ce0e094be96202b6adc4490eebc09f8b11d7ab36f0eec1b5",
+    "frozen/training_enthalpy_molecules.csv": "bd64a459067f3a50cbccd4e393435cf6e44b163826dd2bda7be4530e5a91be15",
+    "review/measurement_lineages.csv": "73e08da7b7a7afa0e52e091a0bc70e808ae18804b646d2ed5c9f9e3b24e6b181",
+    "review/numeric_changes.csv": "2259862219af0c279959ba1e436b70aba7afaf3ce7a52eff0c16fcac6dd7f677",
+    "review/primary_table_transcriptions.csv": "1a0ecf2cd0ebcd40496847f0afb3f06362c67b1d81d33302468ffde029c7dfbf",
+    "review/priority_14_row_decisions.csv": "8dde9e3e6bf0d8c5feeeec209d61d136ef996e65ce1efb37a7fa663f68d1e734",
+    "review/priority_source_results.csv": "27b3d94755996e40ee0d682cfaaa60b44b0adc0abc2ae78d6a5d602a3c646d15",
+    "review/source_register.csv": "00323dea354b6071dea2cc0da742168a714e211173c968ef54406d6da0aac974"
+  },
+  "files_compared": 12,
+  "method": "Repeated export build from identical evidenced review inputs with RDKit 2025.09.6; compare output SHA256",
+  "status": "PASS"
+}

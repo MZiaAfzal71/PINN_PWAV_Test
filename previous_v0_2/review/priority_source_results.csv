@@ -1,6 +1,6 @@
 priority,reference_code,candidate_rows,candidate_molecules,approved_rows,held_rows,unapproved_molecules_reachable,review_status,candidate_dois_json,primary_url
 1,1966WAD,18,18,18,0,0,full_primary_review,"[""10.3891/acta.chem.scand.20-0544""]",https://actachemscand.ki.ku.dk/pdf/acta_vol_20_p0544-0552.pdf
-2,1947OSB/GIN,14,14,0,14,14,primary_table_verified_ancillary_lineage_hold,"[""10.6028/jres.039.031""]",https://nistdigitalarchives.contentdm.oclc.org/digital/api/collection/p16009coll6/id/118316/download
+2,1947OSB/GIN,14,14,0,14,14,full_text_not_obtained,"[""10.6028/jres.039.031""]",https://nvlpubs.nist.gov/nistpubs/jres/39/jresv39n5p453_A1b.pdf
 3,1977MAN/SEL,13,13,0,13,12,full_text_not_obtained,"[""10.1016/0021-9614(77)90202-6""]",https://doi.org/10.1016/0021-9614(77)90202-6
 4,1968WAD,10,10,10,0,0,full_primary_review,"[""10.3891/acta.chem.scand.22-2438""]",https://actachemscand.ki.ku.dk/pdf/acta_vol_22_p2438-2444.pdf
 5,1969WAD,7,7,6,1,1,full_primary_review,"[""10.3891/acta.chem.scand.23-2061""]",https://actachemscand.ki.ku.dk/pdf/acta_vol_23_p2061-2064.pdf
@@ -13,5 +13,3 @@ priority,reference_code,candidate_rows,candidate_molecules,approved_rows,held_ro
 12,1989VOR/KLY,4,4,0,4,4,full_text_not_obtained,[],https://webbook.nist.gov/cgi/cbook.cgi?ID=C75183&Type=HVAP
 13,1968PLA/WIL,4,4,0,4,3,reference_assignment_unresolved,"[""10.1021/ja01012a019""]",https://doi.org/10.1021/ja01012a019
 14,1970HOW/WAD,4,3,3,1,0,full_primary_review,"[""10.3891/acta.chem.scand.24-0145""]",https://actachemscand.ki.ku.dk/pdf/acta_vol_24_p0145-0149.pdf
-15,1971KUS/WAD,3,3,3,0,0,full_primary_review,"[""10.3891/acta.chem.scand.25-0219""]",https://actachemscand.ki.ku.dk/pdf/acta_vol_25_p0219-0224.pdf
-18,1970KUS/WAD,2,2,2,0,0,full_primary_review,"[""10.3891/acta.chem.scand.24-2037""]",https://actachemscand.ki.ku.dk/pdf/acta_vol_24_p2037-2042.pdf

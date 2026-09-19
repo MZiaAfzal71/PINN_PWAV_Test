@@ -4,11 +4,18 @@
   "minimum_independent_enthalpy_molecules": 100,
   "minimum_independent_training_enthalpy_molecules": 100,
   "model_fits_performed": false,
-  "parent_release_id": "enthalpy-freeze-v0.1.0-be4c7b5612677258",
+  "nist_joule_conversion_factor": "1.000165",
+  "nist_joule_conversion_source": "NBS Circular 475 (1949), printed p.22, PDF page 28",
+  "nist_molar_mass_basis": "RDKit 2025.09.6 MolWt conventional natural-isotopic-average mass, g/mol, serialized to 3 decimals; original source reports specific energy only.",
+  "nist_policy": "Direct calorimetry with a documented vapor-pressure-derivative correction is recorded separately. Do not count these rows toward the existing primary gate until the ancillary pressure-table lineage and eligibility decision are resolved.",
+  "nist_temperature_basis": "Nominal 25 C + 273.15; historical International Temperature Scale retained, no ITS-90 correction.",
+  "parent_release_id": "enthalpy-source-review-v0.2.0-cf8fa3b5adff7c3f",
   "pressure_independence_definition": "Not inferred from a pressure-temperature slope/correlation or corrected using benchmark pressure labels. Ancillary apparatus pressure, gas-density corrections and reference checks are disclosed; statistical independence of all laboratory systematics is not claimed.",
+  "previous_review_manifest_sha256": "5a54086967299a873130a0e3d7e8c2053d96c0041d16412b22d29f2e1baad1f1",
   "primary_label_policy": "Verified current-work calorimetry with resolved identity, original table, methods, T, saturation state, uncertainty convention and independent measurement/correction lineage; source-explicit unresolved measurement conflicts held.",
-  "review_date": "2026-09-17",
-  "review_scope": "First 14 priority reference codes; 174 candidates on 100 training molecules; four measurement papers and two method papers obtained.",
+  "review_date": "2026-09-18",
+  "review_scope": "Follow-up on unresolved first-wave sources, plus queue priorities 15 and 18. Five new eligible rows; fourteen NIST rows transcribed and normalized but excluded from the primary pool.",
   "test_targets_used_for_label_decisions": false,
-  "version": "0.2.0"
+  "uncertainty_policy": "Preserve random errors, total estimates, and inequality directions separately; do not use random SE alone as total uncertainty or silently reverse a printed inequality.",
+  "version": "0.3.0"
 }

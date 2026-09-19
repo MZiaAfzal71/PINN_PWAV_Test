@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download ten publicly available original papers for local reinspection.
+"""Download six publicly available original papers for local reinspection.
 
 Downloads go OUTSIDE the frozen release. No publisher PDF is redistributed in
 the data bundle. A changed hash requires review, not automatic acceptance.
